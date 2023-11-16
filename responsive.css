@@ -271,6 +271,10 @@
         padding-right: .5rem;
     }
 
+    #product-details .single-product-details .product-rating {
+        width: 35%;
+    }
+
     #product-details .single-product-details .cart-button {
         display: none
     }
@@ -307,6 +311,9 @@
 
     #product-details .single-product-details .wishlist-button {
         display: none;
+    }
+    #product-details .single-product-details .also-available .card-overlay::before {
+        height: 64%;
     }
 
     #product-details .single-product-details .feature-icon {
@@ -359,7 +366,7 @@
     .mobileShow {
         z-index: 9999;
         display: block flex;
-        bottom: 0;
+        bottom: -5px;
         position: fixed;
         background-color: black;
         width: 100%;
