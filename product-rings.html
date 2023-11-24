@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Praiz</title>
+    <title>Rings</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <!-- Google Fonts -->
@@ -63,6 +63,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">My Account</a>
                         </li>
                     </ul>
                 </div>
@@ -130,6 +133,7 @@
                         <li class="c-one">Silver</li>
                         <li class="c-two">Gold</li>
                         <li class="c-three">Black</li>
+                        <li class="c-all">All Colours</li>
                     </ul>
                 </div>
 
@@ -187,149 +191,134 @@
     <section id="product-list">
 
         <!-- Filter row  -->
+        <div class="filter-container container">
+            <div class="filter-row">
+                <div class="filter-style"> <!--Container-->
+                    <div class="style-btn">
+                        <span class="btn-text">STYLE</span>
+                        <span class="arrow-dwn">
+                            <i class="fa-solid fa-circle-chevron-down" style="color: #132043;"></i>
+                        </span>
+                    </div>
 
-        <div class="filter-row container">
-            <div class="filter-style"> <!--Container-->
-                <div class="style-btn">
-                    <span class="btn-text">STYLE</span>
-                    <span class="arrow-dwn">
-                        <i class="fa-solid fa-circle-chevron-down" style="color: #132043;"></i>
-                    </span>
+                    <ul class="option-list">
+                        <li class="option">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="option-text">Casual</span>
+                        </li>
+
+                        <li class="option">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="option-text">Party</span>
+                        </li>
+
+                        <li class="option">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="option-text">Office</span>
+                        </li>
+
+                        <li class="option">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="option-text">Traditional</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <ul class="option-list">
-                    <li class="option">
-                        <span class="checkbox">
-                            <i class="fa-solid fa-check"></i>
+                <div class="filter-style"> <!--Container-->
+                    <div class="style-btn">
+                        <span class="color-btn-text">COLOUR</span>
+                        <span class="arrow-dwn">
+                            <i class="fa-solid fa-circle-chevron-down" style="color: #132043;"></i>
                         </span>
-                        <span class="option-text">Casual</span>
-                    </li>
+                    </div>
 
-                    <li class="option">
-                        <span class="checkbox">
-                            <i class="fa-solid fa-check"></i>
-                        </span>
-                        <span class="option-text">Party</span>
-                    </li>
-
-                    <li class="option">
-                        <span class="checkbox">
-                            <i class="fa-solid fa-check"></i>
-                        </span>
-                        <span class="option-text">Office</span>
-                    </li>
-
-                    <li class="option">
-                        <span class="checkbox">
-                            <i class="fa-solid fa-check"></i>
-                        </span>
-                        <span class="option-text">Traditional</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="filter-style"> <!--Container-->
-                <div class="style-btn">
-                    <span class="btn-text">COLOUR</span>
-                    <span class="arrow-dwn">
-                        <i class="fa-solid fa-circle-chevron-down" style="color: #132043;"></i>
-                    </span>
+                    <ul class="color-list">
+                        <li class="color color1"> Silver</li>
+                        <li class="color color2">Gold</li>
+                        <li class="color color3">Black</li>
+                        <li class="color colorAll">All Colours</li>
+                        
+                    </ul>
                 </div>
 
-                <ul class="option-list">
-                    <li class="option">
-                        <span class="checkbox">
-                            <i class="fa-solid fa-check"></i>
+                <div class="filter-style"> <!--Container-->
+                    <div class="style-btn">
+                        <span class="btn-text">Price</span>
+                        <span class="arrow-dwn">
+                            <i class="fa-solid fa-circle-chevron-down" style="color: #132043;"></i>
                         </span>
-                        <span class="option-text">Oxidised Silver</span>
-                    </li>
-
-                    <li class="option">
-                        <span class="checkbox">
-                            <i class="fa-solid fa-check"></i>
-                        </span>
-                        <span class="option-text">Golden</span>
-                    </li>
-
-                    <li class="option">
-                        <span class="checkbox">
-                            <i class="fa-solid fa-check"></i>
-                        </span>
-                        <span class="option-text">Black</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="filter-style"> <!--Container-->
-                <div class="style-btn">
-                    <span class="btn-text">Price</span>
-                    <span class="arrow-dwn">
-                        <i class="fa-solid fa-circle-chevron-down" style="color: #132043;"></i>
-                    </span>
-                </div>
-                <div class="price-slider">
-                    <div class="price-input">
-                        <div class="field">
-                            <span>Min</span>
-                            <input type="number" class="input-min" value="2500">
+                    </div>
+                    <div class="price-slider">
+                        <div class="price-input">
+                            <div class="field">
+                                <span>Min</span>
+                                <input type="number" class="input-min" value="2500">
+                            </div>
+                            <div class="separator">-</div>
+                            <div class="field">
+                                <span>Max</span>
+                                <input type="number" class="input-max" value="7500">
+                            </div>
                         </div>
-                        <div class="separator">-</div>
-                        <div class="field">
-                            <span>Max</span>
-                            <input type="number" class="input-max" value="7500">
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                            <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
                         </div>
                     </div>
-                    <div class="slider">
-                        <div class="progress"></div>
-                    </div>
-                    <div class="range-input">
-                        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-                        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
-                    </div>
-                </div>
-            </div>
-
-            <div class="filter-style"> <!--Container-->
-                <div class="style-btn">
-                    <span class="sort-btn-text">SORT BY</span>
-                    <span class="arrow-dwn">
-                        <i class="fa-solid fa-circle-chevron-down" style="color: #132043;"></i>
-                    </span>
                 </div>
 
-                <ul class="sort-list">
-                    <li class="sort">
-                        <span class="sort-text">SORT BY</span>
-                    </li>
+                <div class="filter-style"> <!--Container-->
+                    <div class="style-btn">
+                        <span class="sort-btn-text">SORT BY</span>
+                        <span class="arrow-dwn">
+                            <i class="fa-solid fa-circle-chevron-down" style="color: #132043;"></i>
+                        </span>
+                    </div>
 
-                    <li class="sort">
-                        <span class="sort-text">A <span> &#8594; </span> Z</span>
-                    </li>
+                    <ul class="sort-list">
+                        <li class="sort">
+                            <span class="sort-text">SORT BY</span>
+                        </li>
 
-                    <li class="sort">
-                        <span class="sort-text">Z <span>&#8592;</span>
-                            A</span>
-                    </li>
+                        <li class="sort">
+                            <span class="sort-text">A <span> &#8594; </span> Z</span>
+                        </li>
 
-                    <li class="sort">
-                        <span class="sort-text">Price: Low to High</span>
-                    </li>
+                        <li class="sort">
+                            <span class="sort-text">Z <span>&#8592;</span>
+                                A</span>
+                        </li>
 
-                    <li class="sort">
-                        <span class="sort-text">Price: High to Low</span>
-                    </li>
+                        <li class="sort">
+                            <span class="sort-text">Price: Low to High</span>
+                        </li>
 
-                    <li class="sort">
-                        <span class="sort-text">Latest to Earliest</span>
-                    </li>
+                        <li class="sort">
+                            <span class="sort-text">Price: High to Low</span>
+                        </li>
 
-                    <li class="sort">
-                        <span class="sort-text">Earliest to Latest</span>
-                    </li>
-                </ul>
+                        <li class="sort">
+                            <span class="sort-text">Latest to Earliest</span>
+                        </li>
+
+                        <li class="sort">
+                            <span class="sort-text">Earliest to Latest</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-
         <div class="product-listing">
             <div class="container">
                 <div class="row">
@@ -365,7 +354,8 @@
                                 <button type="button" class="wishlist-button-small">
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to Wishlist</button>
+                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
 
                         </div>
@@ -402,7 +392,8 @@
                                 <button type="button" class="wishlist-button-small">
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to Wishlist</button>
+                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
 
                         </div>
@@ -439,7 +430,8 @@
                                 <button type="button" class="wishlist-button-small">
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to Wishlist</button>
+                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
 
                         </div>
@@ -476,7 +468,8 @@
                                 <button type="button" class="wishlist-button-small">
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to Wishlist</button>
+                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
 
                         </div>
@@ -513,7 +506,8 @@
                                 <button type="button" class="wishlist-button-small">
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to Wishlist</button>
+                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
                         </div>
                     </div>
@@ -549,7 +543,8 @@
                                 <button type="button" class="wishlist-button-small">
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to Wishlist</button>
+                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
                         </div>
                     </div>
@@ -585,7 +580,8 @@
                                 <button type="button" class="wishlist-button-small">
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to Wishlist</button>
+                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
 
                         </div>
@@ -622,9 +618,10 @@
                                 <button type="button" class="wishlist-button-small">
                                     <i class="fa-regular fa-heart"></i>
                                 </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to Wishlist</button>
+                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
-                            
+
                         </div>
                     </div>
 

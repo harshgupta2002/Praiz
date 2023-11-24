@@ -106,8 +106,6 @@ priceInput.forEach((input) => {
   });
 });
 
-//Price Slider
-
 rangeInput.forEach((input) => {
   input.addEventListener("input", (e) => {
     let minVal = parseInt(rangeInput[0].value),
@@ -128,12 +126,33 @@ rangeInput.forEach((input) => {
   });
 });
 
+
 const priceBtn = document.querySelectorAll(".style-btn")[2],
   priceSlider = document.querySelector(".price-slider");
 
 priceBtn.addEventListener("click", () => {
   priceBtn.classList.toggle("open");
 });
+
+//Color Filter
+
+const colorBtn = document.querySelectorAll(".style-btn")[1],
+  color = document.querySelectorAll(".color");
+
+colorBtn.addEventListener("click", () => {
+  colorBtn.classList.toggle("open");
+});
+
+let colorChosen = "none";
+let colorText = document.querySelector(".color-btn-text");
+color.forEach(item => {
+  item.addEventListener("click", () => {
+    colorChosen = item.innerText;
+    if (colorChosen != "none") {
+      colorText.innerText = colorChosen;
+    }
+  })
+})
 
 //Sorting Filter
 

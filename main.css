@@ -6,12 +6,15 @@
 
 body {
     background-color: #F4F5F5;
+    min-height: 100vh;
     font-family: 'Gilda Display', serif;
     color: black;
     font-weight: 400;
     line-height: 1.75rem;
     font-size: 0.85rem;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 a,
@@ -1127,10 +1130,12 @@ footer span {
 #product-details .single-product-img .mob-wishlist {
     display: none;
 }
-.side-menu{
+
+.side-menu {
     display: none;
 }
-.mid-option{
+
+.mid-option {
     display: none;
 }
 
@@ -1139,7 +1144,7 @@ footer span {
 /* Rings Page CSS */
 
 .top-banner {
-    margin-top: 5rem;
+    margin-top: 3rem;
     position: relative;
     overflow: hidden;
     padding-left: 1rem;
@@ -1167,35 +1172,47 @@ footer span {
     height: 30vh;
     background-size: cover;
     background-position: center;
-    
+
 }
 
 #product-list {
     margin-top: 2rem;
 }
-#product-list .container{
+
+#product-list .container {
     width: 100%;
 }
 
-#product-list .filter-row {
-    /* background-color: white; */
+#product-list .filter-container {
     display: flex;
-    justify-content: left space-between;
-    gap: 1rem;
-    /* width: 70%; */
-    /* position: sticky; */
-    position: relative;
-    z-index: 1;
+    justify-content: center;
+}
 
+#product-list .filter-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    /* position: sticky; */
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    /* justify-content: center; */
 }
 
 #product-list .filter-row .filter-style {
-    position: relative;
+    /* position: relative; */
     /* max-width: 320px; */
-    width: 19%;
-    border: 1px solid rgb(235, 235, 235);
+    width: 24%;
+    /* border: 1px solid rgb(235, 235, 235); */
 
 }
+
+/*
+#product-list .filter-row .filter-style:nth-child(4) {
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+} */
 
 #product-list .filter-row .filter-style .style-btn {
     display: flex;
@@ -1208,8 +1225,7 @@ footer span {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
     padding: 1.1rem;
     font-weight: bold;
-
-
+    /* margin-left: 4rem; */
 }
 
 #product-list .filter-row .filter-style .style-btn .btn-text {
@@ -1292,6 +1308,65 @@ footer span {
     color: white;
 }
 
+/* Color Filter Css  */
+
+#product-list .filter-row .filter-style .color-list {
+    position: relative;
+    background-color: white;
+    margin-top: .5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+    padding: .2rem;
+    padding-bottom: .6rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    cursor: pointer;
+    display: none;
+    /* for closed */
+}
+
+#product-list .filter-row .filter-style .style-btn.open~.color-list {
+    display: block;
+}
+
+#product-list .filter-row .filter-style .color-list li {
+    list-style: none;
+    height: 2rem;
+    /* width: 10rem; */
+    margin-top: .5rem;
+    /* text-align: center; */
+    display: flex;
+    background-color: #132043;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+}
+#product-list .filter-row .filter-style .color-list .color1{
+    background-color: silver;
+}
+#product-list .filter-row .filter-style .color-list .color2{
+    background-color: #D3A13A;
+}
+#product-list .filter-row .filter-style .color-list .color3{
+    background-color: #141319;
+}
+#product-list .filter-row .filter-style .color-list .colorAll{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+/* #product-list .filter-row .filter-style .color-list .color:hover {
+    background-color: #cddafc3e;
+    border-radius: 2px;
+} */
+
+#product-list .filter-row .filter-style .color-list .color .color-btn-text {
+    font-size: 14px;
+    margin-top: 2.5px;
+
+}
+
 /* Price Slider CSS */
 
 
@@ -1332,7 +1407,7 @@ footer span {
     margin-left: .7rem;
     text-align: center;
     border: 1px solid #999;
-    -moz-appearance: textfield;
+      -moz-appearance: textfield;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -1402,13 +1477,6 @@ input[type="range"]::-moz-range-thumb {
 
 /* Sort By  */
 
-#product-list .filter-row .filter-style:nth-child(4) {
-    position: absolute;
-    right: 0;
-    margin-right: 1rem;
-
-}
-
 #product-list .filter-row .filter-style .sort-list {
     position: relative;
     background-color: white;
@@ -1457,7 +1525,7 @@ input[type="range"]::-moz-range-thumb {
     border: solid 1px rgba(19, 18, 18, 0.053);
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5rem;   
+    margin-top: 5rem;
 }
 
 #product-list .product-listing .product-card .product-img {
@@ -1527,11 +1595,13 @@ input[type="range"]::-moz-range-thumb {
     color: #a45d47;
     margin-top: -.5rem;
 }
-#product-list .product-listing .product-card .product-info .py-1 i{
+
+#product-list .product-listing .product-card .product-info .py-1 i {
     cursor: pointer;
-    
+
 }
-#product-list .product-listing .product-card .product-info .py-1 i:hover{
+
+#product-list .product-listing .product-card .product-info .py-1 i:hover {
     color: #854a38;
 }
 
@@ -1539,14 +1609,15 @@ input[type="range"]::-moz-range-thumb {
     font-size: 1.3rem;
 }
 
-#product-list .product-listing .product-card .product-info .product-price{
+#product-list .product-listing .product-card .product-info .product-price {
     font-size: 1rem;
 }
-#product-list .product-listing .product-card .product-info .product-price del{
+
+#product-list .product-listing .product-card .product-info .product-price del {
     opacity: .7;
 }
 
-#product-list .product-listing .product-card .card-btn{
+#product-list .product-listing .product-card .card-btn {
     float: left;
     width: 60%;
     margin-top: 0.3rem;
@@ -1580,8 +1651,159 @@ input[type="range"]::-moz-range-thumb {
     padding-top: .5rem;
     padding-bottom: .2rem;
     margin-top: .2rem;
-    
+
 }
+
 #product-list .product-listing .product-card .product-info .wishlist-button-small-mob {
     display: none;
+}
+
+/* Register Page Css */
+
+#register{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+/*
+#register .form-container{
+    background-color: white;
+    position: relative;
+    display: flex;
+    width: 85%;
+    /* justify-content: center; 
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
+    height: 80vh;
+    margin-bottom: 4rem;
+}*/
+#register .card{
+    border-radius: 0;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
+
+}
+#register .reg-img{
+    overflow: hidden;
+}
+
+#register .choose-way ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-left: 0;
+}
+#register .choose-way ul li{
+    list-style: none;
+    padding: .7rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    background-color: #979797;
+    font-size: .7rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#register .choose-way ul .sign-in{
+    background-color: #132043;
+    color: white;
+    /* font-weight: bold; */
+}
+#register .choose-way ul .sign-in:hover{
+    background-color: #0c142a;
+}
+#register .choose-way ul .sign-up{
+    background-color: #a45d47;
+    color: white;
+    /* font-weight: bold; */
+}
+#register .choose-way ul .sign-up:hover{
+    background-color: #854a38;
+}
+
+/* Login form css  */
+#register{
+    flex-grow: 1;
+}
+#register .form-control{
+    width: 100%;
+}
+
+#register .accounts i{
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+#register .divider{
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+#register .divider h5::before{
+    content: '';
+    width: 40%;
+    height: 0.125rem;
+    background-color: #132043;
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    /* bottom: 0; */
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 0
+}
+#register .divider h5::after{
+    content: '';
+    width: 40%;
+    height: 0.125rem;
+    background-color: #132043;
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    /* bottom: 0; */
+    right: -20%;
+    transform: translate(-50%, -50%);
+    border-radius: 0
+}
+#register .form-control-lg{
+    border-radius: 0;
+}
+#register .btn-group-lg>.btn, .btn-lg{
+    border-radius: 0;
+}
+#register .p-lg-5{
+    padding: 0rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+#register .reg-img img{
+    transform: scale(1);
+    transform-origin: 50% 50%;
+}
+
+/* register form css  */
+
+#register .register-form{
+    display: none;
+}
+#register .login-form{
+    display: none;
+}
+#register .choose-way.s-reg~.register-form{
+    display: block;
+}
+#register .choose-way.s-login~.login-form{
+    display: block;
+}
+
+#register .register-form .names{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+#register .register-form .phone-pass{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
 }

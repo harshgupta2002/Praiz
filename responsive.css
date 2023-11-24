@@ -112,14 +112,22 @@
         height: 15vh;
     }
 
-
-    #product-list .filter-row .filter-style {
-        position: relative;
-        /* max-width: 320px; */
-        width: 21%;
+    #product-list .filter-row {
+        /* margin-left: 2rem; */
     }
 
-    #product-list .product-listing .product-card .product-img .discount-tag{
+    #product-list .filter-row .filter-style .style-btn {
+        /* width: 16vh; */
+    }
+
+
+    #product-list .filter-row .filter-style {
+        /* position: relative; */
+        /* max-width: 320px; */
+        /* width: 21%; */
+    }
+
+    #product-list .product-listing .product-card .product-img .discount-tag {
         right: -190px;
     }
 
@@ -226,14 +234,15 @@
         right: -190px;
     }
 
-    #product-list .filter-row {
-        margin-left: 0.3rem;
-    }
 
     #product-list .filter-row .filter-style {
-        position: relative;
+        /* position: relative; */
         /* max-width: 320px; */
-        width: 22%;
+        /* width: 22%; */
+    }
+
+    #product-list .filter-row .filter-style .style-btn {
+        /* width: 14vh; */
     }
 
     #product-list .filter-row .filter-style .price-slider {
@@ -250,8 +259,17 @@
     #products .lower-hashtag .sign-up {
         margin-top: 3rem;
     }
-    #product-list .filter-row .filter-style:nth-child(4){
+
+    /* #product-list .filter-row .filter-style:nth-child(4){
         margin-right: 0px;
+    } */
+
+    #register .choose-way ul li{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    #register .p-lg-5{
+        padding-bottom: 1rem !important;
     }
 }
 
@@ -506,21 +524,28 @@
         color: #132043;
         border-color: #132043;
     }
-    
+
     #product-list .product-listing .product-card .product-info .wishlist-button-small-mob.btn-outline-primary:hover {
         color: #fff;
         background-color: #a45d47;
         border-color: #a45d47;
     }
-    
+
     #product-list .product-listing .product-card .product-info .wishlist-button-small-mob.btn-outline-primary:focus {
         box-shadow: 0 0 0 .25rem rgba(164, 93, 71, 0.363)
     }
 
-    .lower-hashtag .quote{
+    .lower-hashtag .quote {
         margin-bottom: 4rem;
     }
 
+    /* Register Page Css  */
+    #register .p-lg-5{
+        padding-bottom: 2rem !important;
+    }
+    #register .register-form .phone-pass{
+        display: block;
+    }
 
 
 
@@ -746,6 +771,12 @@
 
     .side-dropdowns .dropdown-container .color-list .c-three {
         background-color: #141319;
+    }
+
+    .side-dropdowns .dropdown-container .color-list .c-all {
+        background-color: transparent;
+        color: black;
+        border: 1px solid black;
     }
 
     /* Price Slider */
