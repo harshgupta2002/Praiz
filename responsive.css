@@ -106,6 +106,7 @@
     .top-banner .ring-banner {
         background: url(img/Banner/Ring-Page/ring-banner-2.png);
         background-size: cover;
+        background-position: center;
     }
 
     .top-banner .ring-banner {
@@ -131,6 +132,37 @@
         right: -190px;
     }
 
+    /* Register Page  */
+    .alert-box {
+        margin-left: 30%;
+    }
+
+
+    /* Myaccount Page  */
+    #myAccount .menu-container .account-side-menu {
+        width: 27%;
+    }
+
+    #myAccount .menu-container .order-history {
+        height: 36rem;
+    }
+
+    #myAccount .menu-container .order-history .card {
+        width: 39rem;
+        height: 9vh;
+    }
+
+    #myAccount .menu-container .order-history .card .card-inner {
+        gap: 4rem;
+    }
+
+    #myAccount .menu-container .order-history .card .product-price {
+        width: 3rem;
+    }
+
+    #myAccount .menu-container .praiz-coins .coin-inner .right-side .card-img{
+        height: 15vh;
+    }
 }
 
 
@@ -264,12 +296,41 @@
         margin-right: 0px;
     } */
 
-    #register .choose-way ul li{
+    #register .choose-way ul li {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
-    #register .p-lg-5{
+
+    #register .p-lg-5 {
         padding-bottom: 1rem !important;
+    }
+
+    .alert-box {
+        margin-left: 23%;
+    }
+
+    /* My Account Page  */
+
+    #myAccount .menu-container .order-history {
+        /* width: 29rem; */
+    }
+
+    #myAccount .menu-container .account-side-menu {
+        width: 44%;
+    }
+
+    #myAccount .menu-container .address-book .address-card {
+        gap: 1rem;
+    }
+    #myAccount .menu-container .address-book .address-card .new-address::after{
+        content: 'New Address';
+        position: absolute;
+        left: 29%;
+        bottom: -30px;
+        font-size: 0.6rem;
+    }
+    #myAccount .menu-container .praiz-coins .coin-inner .right-side .card-img{
+        display: none;
     }
 }
 
@@ -458,7 +519,7 @@
     .top-banner .ring-banner {
         background: url(img/Banner/Ring-Page/ring-banner-3.png);
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
     }
 
     #product-list .product-listing .product-card .product-img .product-thumb {
@@ -540,11 +601,17 @@
     }
 
     /* Register Page Css  */
-    #register .p-lg-5{
+    #register .p-lg-5 {
         padding-bottom: 2rem !important;
     }
-    #register .register-form .phone-pass{
+
+    #register .register-form .phone-pass {
         display: block;
+    }
+
+    .alert-box {
+        margin-left: 0%;
+        padding: 0;
     }
 
 

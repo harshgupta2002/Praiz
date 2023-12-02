@@ -191,6 +191,7 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
+
 // toggle 
 
 var filter = document.querySelector(".filter-mob");

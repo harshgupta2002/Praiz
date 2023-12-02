@@ -1131,6 +1131,10 @@ footer span {
     display: none;
 }
 
+.mobileShow-plist {
+    display: none;
+}
+
 .side-menu {
     display: none;
 }
@@ -1144,7 +1148,7 @@ footer span {
 /* Rings Page CSS */
 
 .top-banner {
-    margin-top: 3rem;
+    margin-top: 5rem;
     position: relative;
     overflow: hidden;
     padding-left: 1rem;
@@ -1341,16 +1345,20 @@ footer span {
     font-size: 1rem;
     color: white;
 }
-#product-list .filter-row .filter-style .color-list .color1{
+
+#product-list .filter-row .filter-style .color-list .color1 {
     background-color: silver;
 }
-#product-list .filter-row .filter-style .color-list .color2{
+
+#product-list .filter-row .filter-style .color-list .color2 {
     background-color: #D3A13A;
 }
-#product-list .filter-row .filter-style .color-list .color3{
+
+#product-list .filter-row .filter-style .color-list .color3 {
     background-color: #141319;
 }
-#product-list .filter-row .filter-style .color-list .colorAll{
+
+#product-list .filter-row .filter-style .color-list .colorAll {
     background-color: transparent;
     color: black;
     border: 1px solid black;
@@ -1407,7 +1415,7 @@ footer span {
     margin-left: .7rem;
     text-align: center;
     border: 1px solid #999;
-      -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -1660,12 +1668,36 @@ input[type="range"]::-moz-range-thumb {
 
 /* Register Page Css */
 
-#register{
+.alert-box {
+    position: fixed;
+    margin-left: 35%;
+    z-index: 9;
+    margin-top: 5rem;
+    display: flex;
+    display: none;
+    /* position: absolute; */
+}
+
+.alert-box i {
+    font-size: 1.1rem;
+    /* margin-left: 1rem; */
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#register {
+    flex-grow: 1;
+}
+
+#register {
     margin-top: 5rem;
     margin-bottom: 2rem;
     /* display: flex; */
     /* justify-content: center; */
 }
+
 /*
 #register .form-container{
     background-color: white;
@@ -1677,22 +1709,24 @@ input[type="range"]::-moz-range-thumb {
     height: 80vh;
     margin-bottom: 4rem;
 }*/
-#register .card{
+#register .card {
     border-radius: 0;
     box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
 
 }
-#register .reg-img{
+
+#register .reg-img {
     overflow: hidden;
 }
 
-#register .choose-way ul{
+#register .choose-way ul {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
     padding-left: 0;
 }
-#register .choose-way ul li{
+
+#register .choose-way ul li {
     list-style: none;
     padding: .7rem;
     padding-left: 3.5rem;
@@ -1702,43 +1736,47 @@ input[type="range"]::-moz-range-thumb {
     text-transform: uppercase;
     cursor: pointer;
 }
-#register .choose-way ul .sign-in{
+
+#register .choose-way ul .sign-in {
     background-color: #132043;
     color: white;
     /* font-weight: bold; */
 }
-#register .choose-way ul .sign-in:hover{
+
+#register .choose-way ul .sign-in:hover {
     background-color: #0c142a;
 }
-#register .choose-way ul .sign-up{
+
+#register .choose-way ul .sign-up {
     background-color: #a45d47;
     color: white;
     /* font-weight: bold; */
 }
-#register .choose-way ul .sign-up:hover{
+
+#register .choose-way ul .sign-up:hover {
     background-color: #854a38;
 }
 
 /* Login form css  */
-#register{
-    flex-grow: 1;
-}
-#register .form-control{
+
+#register .form-control {
     width: 100%;
 }
 
-#register .accounts i{
+#register .accounts i {
     font-size: 1.4rem;
     margin-left: 1rem;
     cursor: pointer;
     margin-bottom: 2rem;
 }
-#register .divider{
+
+#register .divider {
     text-align: center;
     position: relative;
     margin-bottom: 2rem;
 }
-#register .divider h5::before{
+
+#register .divider h5::before {
     content: '';
     width: 40%;
     height: 0.125rem;
@@ -1751,7 +1789,8 @@ input[type="range"]::-moz-range-thumb {
     transform: translate(-50%, -50%);
     border-radius: 0
 }
-#register .divider h5::after{
+
+#register .divider h5::after {
     content: '';
     width: 40%;
     height: 0.125rem;
@@ -1764,46 +1803,769 @@ input[type="range"]::-moz-range-thumb {
     transform: translate(-50%, -50%);
     border-radius: 0
 }
-#register .form-control-lg{
+
+#register .form-control-lg {
     border-radius: 0;
 }
-#register .btn-group-lg>.btn, .btn-lg{
+
+#register .btn-group-lg>.btn,
+.btn-lg {
     border-radius: 0;
 }
-#register .p-lg-5{
+
+#register .p-lg-5 {
     padding: 0rem !important;
     padding-left: 3rem !important;
     padding-right: 3rem !important;
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
 }
-#register .reg-img img{
+
+#register .reg-img img {
     transform: scale(1);
     transform-origin: 50% 50%;
 }
 
 /* register form css  */
 
-#register .register-form{
+#register .register-form {
     display: none;
 }
-#register .login-form{
+
+#register .login-form {
     display: none;
 }
-#register .choose-way.s-reg~.register-form{
-    display: block;
-}
-#register .choose-way.s-login~.login-form{
+
+#register .choose-way.s-reg~.register-form {
     display: block;
 }
 
-#register .register-form .names{
+#register .choose-way.s-login~.login-form {
+    display: block;
+}
+
+#register .register-form .names {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
-#register .register-form .phone-pass{
+
+#register .register-form .phone-pass {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+}
+
+/* My Account Page CSS  */
+
+/* only phone page  */
+
+.mob-account-opt {
+    padding: 1rem;
+}
+
+.mob-account-opt .menu-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.mob-account-opt .menu-row .option {
+    background-color: white;
+    padding: .2rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border: .5px solid rgba(0, 0, 0, 0.114);
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 5%);
+    width: 45%;
+    text-align: center;
+    font-size: .7rem;
+    cursor: pointer;
+}
+
+.mob-account-opt .menu-row .option:hover {
+    background-color: rgba(240, 237, 237, 0.016)
+}
+.mob-account-opt .order-history {
+    display: none; 
+}
+.mob-account-opt.order-history .order-history{
+    display: block;
+}
+.mob-account-opt .order-history .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: 0;
+    border: .5px solid rgba(0, 0, 0, 0.062);
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 5%);
+}
+.mob-account-opt .order-history .card .card-flex {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.mob-account-opt .order-history .card .card-img-top {
+    width: 35%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.mob-account-opt .order-history .card .card-inner {
+    display: flex;
+    align-items: center;
+}
+.mob-account-opt .order-history .card .card-inner h6{
+    font-size: .9rem;
+}
+.mob-account-opt .order-history .card .card-inner .card-body div{
+    font-size: .6rem;
+}
+.mob-account-opt .order-history .card .product-price{
+    width: 3rem;
+}
+.mob-account-opt .order-history .card .mob-card-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* gap: .1rem; */
+}
+.mob-account-opt .order-history .card .mob-card-buttons a{
+    border-radius: 0;
+    width: 9.5rem;
+    font-size: .8rem;
+    background-color: #132043;
+    border-color: #132043;
+    width: 100%;
+}
+.mob-account-opt .order-history .card .mob-card-buttons .btn:hover {
+    background-color: #0e1730;
+    box-shadow: none;
+    
+}
+
+.mob-account-opt .order-history .card .mob-card-buttons a:nth-child(2):hover {
+    background-color: #854a38;
+    box-shadow: none;
+    
+}
+.mob-account-opt .order-history .card .mob-card-buttons a:nth-child(2) {
+    background-color: #a45d47;
+    border-color: #a45d47;
+}
+
+.mob-account-opt .praiz-coins{
+    background-color: white;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
+    padding: 2rem;
+    margin-top: 1rem;
+    padding-top: 4rem;
+    height: 25rem;
+    /* overflow-y: scroll; */
+    display: none;
+}
+.mob-account-opt.praiz-coins .praiz-coins{
+    display: block;
+}
+.mob-account-opt .praiz-coins .coin-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.mob-account-opt .praiz-coins  .available-coin {
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+.mob-account-opt .praiz-coins  .coin-balance {
+    font-size: 5rem;
+    color: #a45d47;
+}
+.mob-account-opt .praiz-coins  .redeem-coin {
+    margin-bottom: 1.5rem;
+    margin-top: 1.3rem;
+}
+
+.mob-account-opt .praiz-coins  .code-input .form-inline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mob-account-opt .praiz-coins  .code-input input {
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    padding-left: .5rem;
+}
+
+.mob-account-opt .praiz-coins  button {
+    border-radius: 0;
+    font-size: .9rem;
+    background-color: #132043;
+    border-color: #132043;
+
+}
+
+.mob-account-opt .praiz-coins  button:focus {
+    box-shadow: 0 0 0 .25rem rgba(4, 45, 107, 0.5)
+}
+
+.mob-account-opt .praiz-coins  .code-input .alert-success {
+    display: none;
+}
+
+.mob-account-opt .praiz-coins  .code-input .alert-danger {
+    display: none;
+}
+
+.mob-account-opt .praiz-coins  .code-input .alert-warning {
+    display: none;
+}
+.mob-account-opt .address-book{
+    text-align: center;
+    display: none;
+}
+.mob-account-opt.address-book .address-book{
+    display: block;
+}
+.mob-account-opt .Acard{
+    border: 1px solid rgba(0, 0, 0, 0.048);
+    margin-top: 1rem;
+    width: 100%;
+    height: 10rem;
+    border-radius: 0;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 8%);
+    transition: all .1s ease-in-out;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: .5rem;
+}
+.mob-account-opt .Acard:hover {
+    box-shadow: -3px 18px 20px 0px rgba(99, 89, 99, .2);
+}
+.mob-account-opt .Acard:active {
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 2%);
+}
+.mob-account-opt .Acard span{
+    font-size: 10rem;
+    opacity: .2;
+    line-height: normal;
+}
+.mob-account-opt .Acard .address span{
+    font-size: 2rem;
+    opacity: .2;
+    line-height: normal;
+}
+.mob-account-opt .my-account{
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
+    padding: 1rem;
+    height: 18rem;
+    overflow-y: scroll;
+    width: 100%;
+    display: none;
+}
+.mob-account-opt.my-account .my-account{
+    display: block;
+}
+.mob-account-opt .my-account .my-account-inner .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+} 
+.mob-account-opt .my-account .my-account-inner .info-inner {
+    font-size: .8rem;
+}
+.mob-account-opt .my-account .my-account-inner ul {
+    padding-left: 0;
+}
+.mob-account-opt .my-account .my-account-inner .info-inner input {
+    margin-left: 1rem;
+    border: .5px solid rgba(0, 0, 0, 0.397);
+    border-radius: 0;
+    padding-left: .5rem;
+    width: 6rem;
+    /* height: 2.2rem; */
+    display: none;
+}
+.mob-account-opt .my-account .my-account-inner .info .submit-btn{
+    display: none;
+}
+.mob-account-opt .my-account .my-account-inner .info-inner.editBtn .user-data {
+    display: none;
+}
+.mob-account-opt .my-account .my-account-inner .info-inner.editBtn input {
+    display: inline;
+}
+.mob-account-opt .my-account .my-account-inner .info-inner.editBtn~.submit-btn {
+    display: block;
+}
+.mob-account-opt .my-account .my-account-inner .info-inner.editBtn~.edit-btn {
+    display: none;
+}
+.mob-account-opt .my-account .my-account-inner .info button {
+    border-radius: 0;
+    background-color: #132043;
+    border-color: #132043;
+    font-size: .7rem;
+    padding: .2rem;
+    padding-left: .4rem;
+    padding-right: .4rem;
+}
+.mob-account-opt .my-account .my-account-inner .info button:hover {
+    background-color: #0c142b;
+}
+.mob-account-opt .my-account .my-account-inner .info button:hover {
+    box-shadow: 0 0 0 .25rem rgba(4, 45, 107, 0.5)
+}
+
+
+#myAccount {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#myAccount .menu-container {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1rem;
+
+}
+
+#myAccount .menu-container .account-side-menu {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
+    padding: 4px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 22%;
+}
+
+#myAccount .menu-container .account-side-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+#myAccount .menu-container .account-side-menu li {
+    list-style-type: none;
+    padding-left: 0rem;
+    padding-right: 2rem;
+    line-height: 3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+#myAccount .menu-container .account-side-menu .option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#myAccount .menu-container .account-side-menu .option:hover {
+    background-color: rgb(241, 241, 241);
+
+}
+
+#myAccount .menu-container .account-side-menu .option .icon {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+}
+
+#myAccount .menu-container .account-side-menu .option .arrow {
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+}
+
+#myAccount .menu-container .order-history {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
+    padding: 2rem;
+    height: 35rem;
+    overflow-y: scroll;
+    display: none;
+    width: 77%;
+}
+
+#myAccount .menu-container .account-side-menu.option1~.order-history {
+    display: block;
+}
+
+#myAccount .menu-container .order-history .card {
+    display: flex;
+    flex-direction: row;
+    height: 23%;
+    width: 50rem;
+    border-radius: 0;
+    padding: .5rem;
+    /* justify-content: space-between; */
+    /* gap: 1rem; */
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#myAccount .menu-container .order-history .card img {
+    width: 6rem;
+    border-radius: 0;
+}
+
+#myAccount .menu-container .order-history .card .card-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 9rem;
+    align-items: center;
+}
+
+#myAccount .menu-container .order-history .card .card-body h6 {
+    margin-bottom: 0;
+    line-height: normal;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+#myAccount .menu-container .order-history .card .card-body .product-color,
+#myAccount .menu-container .order-history .card .card-body .product-size,
+#myAccount .menu-container .order-history .card .card-body .current-status {
+    opacity: .8;
+    /* margin-bottom: .3rem; */
+    font-size: .8rem;
+}
+
+#myAccount .menu-container .order-history .card .product-price {
+    font-size: 1rem;
+}
+
+#myAccount .menu-container .order-history .card .card-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+}
+
+#myAccount .menu-container .order-history .card .card-buttons .btn:focus {
+    box-shadow: 0 0 0 .25rem rgba(4, 45, 107, 0.5)
+}
+
+#myAccount .menu-container .order-history .card .card-buttons a:nth-child(2):focus {
+    box-shadow: 0 0 0 .25rem rgba(164, 93, 71, 0.452);
+
+}
+
+#myAccount .menu-container .order-history .card .card-buttons a {
+    min-width: 150px;
+    font-size: .8rem;
+    background-color: #132043;
+    border-radius: 0;
+}
+
+#myAccount .menu-container .order-history .card .card-buttons a:nth-child(2) {
+    background-color: #a45d47;
+    border-color: #a45d47;
+}
+
+#myAccount .menu-container .order-history .card .card-buttons a:nth-child(2):hover {
+    background-color: #854a38;
+}
+
+#myAccount .menu-container .order-history .card .card-buttons a:hover {
+    background-color: #0c142b;
+}
+
+/* Praiz Coin  */
+
+#myAccount .menu-container {
+    margin-bottom: 2rem;
+
+}
+
+#myAccount .menu-container .praiz-coins {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
+    padding: 2rem;
+    height: 35rem;
+    /* overflow-y: scroll; */
+    width: 77%;
+    display: none;
+}
+
+#myAccount .menu-container .account-side-menu.option2~.praiz-coins {
+    display: block;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side .available-coin {
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side .coin-balance {
+    font-size: 5rem;
+    color: #a45d47;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side .redeem-coin {
+    margin-bottom: 1.5rem;
+    margin-top: 1.3rem;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side .code-input .form-inline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side .code-input input {
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    padding-left: .5rem;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side button {
+    border-radius: 0;
+    font-size: .9rem;
+    background-color: #132043;
+    border-color: #132043;
+
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side button:focus {
+    box-shadow: 0 0 0 .25rem rgba(4, 45, 107, 0.5)
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side .code-input .alert-success {
+    display: none;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side .code-input .alert-danger {
+    display: none;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .left-side .code-input .alert-warning {
+    display: none;
+}
+
+#myAccount .menu-container .praiz-coins .coin-inner .right-side .card-img {
+    height: 30vh;
+    border-radius: 5px;
+}
+
+/* Address book  */
+
+#myAccount .menu-container .address-book {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
+    padding: 2rem;
+    height: 32rem;
+    /* overflow-y: scroll; */
+    width: 77%;
+    display: none;
+    overflow: scroll;
+}
+
+#myAccount .menu-container .account-side-menu.option3~.address-book {
+    display: block;
+}
+
+#myAccount .menu-container .address-book .address-card {
+    display: flex;
+    gap: 2rem;
+    /* display: none; Address Card OFF  */
+}
+
+#myAccount .menu-container .address-book .address-card.new-card {
+    display: none;
+}
+
+#myAccount .menu-container .address-book .address-card .Acard {
+    border: 1px solid rgba(0, 0, 0, 0.048);
+    margin-top: 1rem;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 0;
+    display: flex;
+    cursor: pointer;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 15%);
+    transition: all .1s ease-in-out;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#myAccount .menu-container .address-book .address-card .Acard:hover {
+    box-shadow: -3px 18px 20px 0px rgba(99, 89, 99, .2);
+}
+
+#myAccount .menu-container .address-book .address-card .Acard:active {
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 5%);
+
+}
+
+#myAccount .menu-container .address-book .address-card .new-address::after {
+    content: 'New Address';
+    position: absolute;
+    left: 38%;
+    bottom: -30px;
+}
+
+#myAccount .menu-container .address-book .address-card .new-address span {
+    font-size: 10rem;
+    opacity: .2;
+    line-height: normal;
+}
+
+#myAccount .menu-container .address-book .address-card .address span {
+    font-size: 2rem;
+    opacity: .2;
+    line-height: normal;
+}
+
+#myAccount .menu-container .address-book .address-form {
+    width: 60%;
+    display: none;
+}
+
+#myAccount .menu-container .address-book .address-card.new-card~.address-form {
+    display: block;
+}
+
+#myAccount .menu-container .address-book .address-form input {
+    border-radius: 0;
+}
+
+#myAccount .menu-container .address-book .address-form .submit-btn {
+    background-color: #132043;
+    border-radius: 0;
+    border-color: #132043;
+    width: 8rem;
+}
+
+#myAccount .menu-container .address-book .address-form .submit-btn:hover {
+    background-color: #0e1730;
+}
+
+#myAccount .menu-container .address-book .address-form .submit-btn:focus {
+    box-shadow: 0 0 0 .25rem rgba(4, 45, 107, 0.5)
+}
+
+#myAccount .menu-container .address-book .address-form .alert-text-danger {
+    color: red;
+    display: none;
+}
+
+#myAccount .menu-container .address-book .address-form .alert-text-success {
+    color: green;
+    display: none;
+}
+
+/* My account  */
+#myAccount .menu-container .my-account {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 10%);
+    padding: 2rem;
+    height: 32rem;
+    /* overflow-y: scroll; */
+    width: 77%;
+    display: none;
+}
+
+#myAccount .menu-container .account-side-menu.option4~.my-account {
+    display: block;
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info-inner {
+    font-size: 1rem;
+}
+
+#myAccount .menu-container .my-account .my-account-inner ul {
+    padding-left: 0;
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info-inner .user-data {
+    /* display: none; */
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info-inner input {
+    margin-left: 1rem;
+    border: .5px solid rgba(0, 0, 0, 0.397);
+    border-radius: 0;
+    padding-left: .5rem;
+    display: none;
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info-inner.editBtn .user-data {
+    display: none;
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info-inner.editBtn input {
+    display: inline;
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info-inner.editBtn~.submit-btn {
+    display: block;
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info-inner.editBtn~.edit-btn {
+    display: none;
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info button {
+    border-radius: 0;
+    background-color: #132043;
+    border-color: #132043;
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info button:hover {
+    background-color: #0c142b;
+}
+
+#more-products .product-container .product-card .product-info .btn:focus {
+    box-shadow: 0 0 0 .25rem rgba(4, 45, 107, 0.5)
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info .edit-btn {
+    /* display: none; */
+}
+
+#myAccount .menu-container .my-account .my-account-inner .info .submit-btn {
+    display: none;
 }
