@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cart Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Gilda+Display&display=swap" rel="stylesheet">
+
+    <!--Themefy CSS-->
+    <link rel="stylesheet" href="themify-icons-font/themify-icons.css">
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--My CSS Styles-->
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <!--Resposive 5 css-->
+    <link rel="stylesheet" href="responsive.css">
+
+
+    <script src="https://kit.fontawesome.com/848f303d41.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!--Navigation Section-->
+    <section id="header">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo/trial 5.png" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <!-- button icon -->
+                    <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pendent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Earrings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bracelet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">My Account</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="loc"><a href="#">Home</a> / <a href="#">Rings</a></div>
+        <div class="cart-banner"></div>
+    </div>
+
+    <!-- Mobile View Buttons -->
+    <section id="mob-cart-view">
+        <div class="cart-lower-btn">
+            <div class="p-price-total">Total:<span id="total-amount"> &#8377; 1400</span></div>
+            <button class="checkout">Checkout</button>
+        </div>
+
+        <div class="mob-cart-page container d-block d-sm-none">
+            <h5 class="text-center">Shopping Cart</h5>
+            <div class="product-card ">
+                <div class="card">
+                    <div class="card-left">
+                        <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product-img">
+                        <div class="quantity">
+                            <a href="#" class="quantity__minus"><span>-</span></a>
+                            <input name="quantity" type="text" class="quantity__input" value="1">
+                            <a href="#" class="quantity__plus"><span>+</span></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title">Product Complete Name</h5></a>
+                        <div class="py-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div id="p-cost" style="line-height: normal;">
+                            <h6>&#8377; 489</h6>
+                        </div>
+                        <div id="p-color" style="line-height: normal;">Silver</div>
+                    </div>
+                </div>
+                <div class="card-btn">
+                    <a class="w-btn btn btn-primary"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>Add to
+                        Wishlist</a>
+                    <a class="btn btn-primary"><i class="fa-solid fa-trash" style="color: #ffffff;"></i>Remove</a>
+                </div>
+            </div>
+
+            <div class="product-card ">
+                <div class="card">
+                    <div class="card-left">
+                        <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product-img">
+                        <div class="quantity">
+                            <a href="#" class="quantity__minus"><span>-</span></a>
+                            <input name="quantity" type="text" class="quantity__input" value="1">
+                            <a href="#" class="quantity__plus"><span>+</span></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title">Product Complete Name</h5></a>
+                        <div class="py-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div id="p-cost" style="line-height: normal;">
+                            <h6>&#8377; 489</h6>
+                        </div>
+                        <div id="p-color" style="line-height: normal;">Silver</div>
+                    </div>
+                </div>
+                <div class="card-btn">
+                    <a class="w-btn btn btn-primary"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>Add to
+                        Wishlist</a>
+                    <a class="btn btn-primary"><i class="fa-solid fa-trash" style="color: #ffffff;"></i>Remove</a>
+                </div>
+            </div>
+
+            <div class="product-card ">
+                <div class="card">
+                    <div class="card-left">
+                        <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product-img">
+                        <div class="quantity">
+                            <a href="#" class="quantity__minus"><span>-</span></a>
+                            <input name="quantity" type="text" class="quantity__input" value="1">
+                            <a href="#" class="quantity__plus"><span>+</span></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title">Product Complete Name</h5></a>
+                        <div class="py-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div id="p-cost" style="line-height: normal;">
+                            <h6>&#8377; 489</h6>
+                        </div>
+                        <div id="p-color" style="line-height: normal;">Silver</div>
+                    </div>
+                </div>
+                <div class="card-btn">
+                    <a class="w-btn btn btn-primary"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>Add to
+                        Wishlist</a>
+                    <a class="btn btn-primary"><i class="fa-solid fa-trash" style="color: #ffffff;"></i>Remove</a>
+                </div>
+            </div>
+
+            <div class="cart-dets">
+                <h5 class="fw-bold">Summary</h5>
+                <div class="p-cost">Total Product Cost: <span id="p-cost">&#8377; 1400</span></div>
+                <div class="d-amount">Product Discount: <span id="d-amount">- &#8377; 80</span></div>
+                <p>Have a coupon?</p>
+                <input type="number" placeholder="Enter coupon code">
+                <a href="javascript:void(0)">Apply Coupon</a>
+                <div class="alert alert-success" role="alert">
+                    Coupon <b>accepted!</b>
+                </div>
+                <div class="alert alert-danger" role="alert">
+                    Coupon <b>rejected!</b>
+                </div>
+                <div class="d-cost">Coupon Discount: <span id="d-cost">- &#8377; 80</span></div>
+                <div class="de-cost">Delivery Charges: <span id="de-cost">&#8377; 40</span></div>
+                <p class="free-delivery">*Buy items worth <span id="remaining-cost"> &#8377; 199 </span>more to
+                    get FREE Delivery on your purchase</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart-page">
+        <div class="cart-page-inner container d-none d-sm-flex">
+            <div class="cart-page-left">
+                <h5 class="section-head fw-bold">Shopping Cart</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Quanity</th>
+                            <th scope="col" class="color-head">Colour</th>
+                            <th scope="col" class="price-head">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="product-col">
+                                <div class="product-card">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product1">
+                                        <div class="card-body">
+                                            <a href="#"><h5 class="card-title">Product Name</h5></a>
+                                            <div class="card-text d-none d-md-block d-lg-none ">
+                                                <span id="p-price">&#8377; 489</span>
+                                                <span id="p-color">Silver</span>
+                                            </div>
+                                            <div class="card-btn">
+                                                <button type="button" class="btn btn-outline-light">
+                                                    <i class="fa-solid fa-heart" style="color: #000000;"></i>Add to
+                                                    Wishlist
+                                                </button>
+                                                <button type="button" class="btn btn-outline-light"><i
+                                                        class="fa-solid fa-trash" style="color: #000000;"></i>Remove
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="quanity-row">
+                                <div class="quantity">
+                                    <a href="#" class="quantity__minus"><span>-</span></a>
+                                    <input name="quantity" type="text" class="quantity__input" value="1">
+                                    <a href="#" class="quantity__plus"><span>+</span></a>
+                                </div>
+
+                            </td>
+                            <td class="color-col">Black</td>
+                            <td class="price-col">&#8377; 489</td>
+                        </tr>
+                        <tr>
+                            <td class="product-col">
+                                <div class="product-card">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product1">
+                                        <div class="card-body">
+                                            <a href="#"><h5 class="card-title">Product Name</h5></a>
+                                            <div class="card-text d-none d-md-block d-lg-none ">
+                                                <span id="p-price">&#8377; 489</span>
+                                                <span id="p-color">Silver</span>
+                                            </div>
+                                            <div class="card-btn">
+                                                <button type="button" class="btn btn-outline-light">
+                                                    <i class="fa-solid fa-heart" style="color: #000000;"></i>Add to
+                                                    Wishlist
+                                                </button>
+                                                <button type="button" class="btn btn-outline-light"><i
+                                                        class="fa-solid fa-trash" style="color: #000000;"></i>Remove
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="quanity-row">
+                                <div class="quantity">
+                                    <a href="#" class="quantity__minus"><span>-</span></a>
+                                    <input name="quantity" type="text" class="quantity__input" value="1">
+                                    <a href="#" class="quantity__plus"><span>+</span></a>
+                                </div>
+
+                            </td>
+                            <td class="color-col">Silver</td>
+                            <td class="price-col">&#8377; 489</td>
+                        </tr>
+                        <tr>
+                            <td class="product-col">
+                                <div class="product-card">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product1">
+                                        <div class="card-body">
+                                            <a href="#"><h5 class="card-title">Product Name</h5></a>
+                                            <div class="card-text d-none d-md-block d-lg-none ">
+                                                <span id="p-price">&#8377; 489</span>
+                                                <span id="p-color">Silver</span>
+                                            </div>
+                                            <div class="card-btn">
+                                                <button type="button" class="btn btn-outline-light">
+                                                    <i class="fa-solid fa-heart" style="color: #000000;"></i>Add to
+                                                    Wishlist
+                                                </button>
+                                                <button type="button" class="btn btn-outline-light"><i
+                                                        class="fa-solid fa-trash" style="color: #000000;"></i>Remove
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="quanity-row">
+                                <div class="quantity">
+                                    <a href="#" class="quantity__minus"><span>-</span></a>
+                                    <input name="quantity" type="text" class="quantity__input" value="1">
+                                    <a href="#" class="quantity__plus"><span>+</span></a>
+                                </div>
+                            </td>
+                            <td class="color-col">Black</td>
+                            <td class="price-col">&#8377; 489</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-page-right">
+                <div class="right-top">
+                    <h5 class="section-head fw-bold">Summary</h5>
+                    <div class="right-top-inner">
+                        <div class="p-cost">Total Product Cost: <span id="p-cost">&#8377; 1400</span></div>
+                        <div class="d-amount">Product Discount: <span id="d-amount">- &#8377; 80</span></div>
+                        <p>Have a coupon?</p>
+                        <input type="number" placeholder="Enter coupon code">
+                        <a>Apply Coupon</a>
+                        <button class="apply-btn d-none d-md-block d-lg-none">Apply Coupon</button>
+                        <div class="alert alert-success" role="alert">
+                            Coupon <b>accepted!</b>
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            Coupon <b>rejected!</b>
+                        </div>
+                        <div class="d-cost">Coupon Discount: <span id="d-cost">- &#8377; 80</span></div>
+                        <div class="de-cost">Delivery Charges: <span id="de-cost">&#8377; 40</span></div>
+                        <p class="free-delivery">*Buy items worth <span id="remaining-cost"> &#8377; 199 </span>more to
+                            get FREE Delivery on your purchase</p>
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="total-amount">Total Amount: <span id="total-amount">&#8377; 1100</span></div>
+                    <div class="check-btn">
+                        <a href="checkout-page.html"><button type="button" class="checkout btn btn-outline-primary">Checkout</button></a>
+                        <button type="button" class="cont-shopping btn btn-outline-primary">Continue Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start mt-2">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fa-brands fa-facebook-f" style="color: #fafafa;"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fa-brands fa-x-twitter" style="color: #fafafa;"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fa-brands fa-google" style="color: #fafafa;"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fa-brands fa-instagram" style="color: #fafafa;"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fa-brands fa-linkedin-in" style="color: #fafafa;"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fa-brands fa-pinterest-p" style="color: #fafafa;"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="down-footer">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Our Company
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Blog
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Jwellery Care</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Ring Size</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Jwellery Stylling</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">More...</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Guest Care
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Return Policy</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">FAQ</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Order Status</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Terms and Conditions</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            wearepraizwear@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 91 9899039649</p>
+                        <p><i>* 9am to 10pm- 7 Days a Week *</i></p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+    </footer>
+    <!-- Footer -->
+
+
+    <!--Bootstrap 5 js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Bootstrap 5 js-->
+    <script src="cartPage.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
