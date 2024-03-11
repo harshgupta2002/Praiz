@@ -27,6 +27,23 @@ wishlistBtn = document.querySelectorAll(".w-btn");
 console.log(wishlistBtn.length);
 for (let i = 0; i < wishlistBtn.length; i++) {
     wishlistBtn[i].addEventListener("click", () => {
-        document.querySelectorAll(".w-btn")[i].textContent="Added";
+        document.querySelectorAll(".w-btn")[i].textContent = "Added";
     })
 }
+
+
+var addOpt=document.querySelectorAll(".form-check");
+var newAddForm = document.querySelector(".new-add-form");
+var addressForm=document.querySelector(".address-form")
+
+addOpt.forEach(function(element, index) {
+    element.addEventListener("click", function() {
+        this.classList.add("selected");
+        addOpt.forEach(function(otherElement, otherIndex) {
+            if (otherIndex !== index && otherElement.classList.contains("selected")) {
+                otherElement.classList.remove("selected");
+            }
+        });
+        console.log("clicked");
+    });
+});

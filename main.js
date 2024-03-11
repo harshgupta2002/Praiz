@@ -1,216 +1,64 @@
-// Add to cart single product button 
-const cartButtons = document.querySelectorAll('.cart-button');
-
-cartButtons.forEach(button => {
-  button.addEventListener('click', cartClick);
-});
-
-function cartClick() {
-  let button = this;
-  button.classList.add('clicked');
-}
-
-const productContainers = [...document.querySelectorAll('.product-container')];
-const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.pre-btn')];
-const scrollFraction = 0.5; // Adjust this value to control the scrolling distance
-
-productContainers.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
-
-  nxtBtn[i].addEventListener('click', () => {
-    item.scrollLeft += containerWidth * scrollFraction;
-  });
-
-  preBtn[i].addEventListener('click', () => {
-    item.scrollLeft -= containerWidth * scrollFraction;
-  });
-});
-
-function myFunction(x) {
-  if (x.matches) { // If media query matches
-
-    const productContainers = [...document.querySelectorAll('.product-container')];
-    const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-    const preBtn = [...document.querySelectorAll('.pre-btn')];
-    const scrollFraction = .75; // Adjust this value to control the scrolling distance
-
-    productContainers.forEach((item, i) => {
-      let containerDimensions = item.getBoundingClientRect();
-      let containerWidth = containerDimensions.width;
-
-      nxtBtn[i].addEventListener('click', () => {
-        item.scrollLeft += containerWidth * scrollFraction;
-      });
-
-      preBtn[i].addEventListener('click', () => {
-        item.scrollLeft -= containerWidth * scrollFraction;
-      });
-    });
-
+// var lastScroll=0;
+var navbar = document.querySelector("#header .fixed-top");
+// navbar.style.height="3.5rem"
+window.addEventListener("scroll", () => {
+  var scrollTop = (document.documentElement.scrollTop);
+  console.log(scrollTop);
+  if (scrollTop > 70) {
+    navbar.classList.remove("expanded")
+    dropDown.classList.remove("md");
   }
-}
-
-var x = window.matchMedia("(max-width: 575.98px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
-
-//Style Filter
-
-const styleBtn = document.querySelectorAll(".style-btn")[0],
-  optionFirst = document.querySelectorAll(".option");
-
-styleBtn.addEventListener("click", () => {
-  styleBtn.classList.toggle("open");
-});
-
-optionFirst.forEach(item => {
-  item.addEventListener("click", () => {
-    item.classList.toggle("checked");
-
-    let checked = document.querySelectorAll(".checked"),
-      btnText = document.querySelector(".btn-text");
-
-    if (checked && checked.length > 0) {
-      btnText.innerText = `${checked.length} Selected`;
-    }
-    else {
-      btnText.innerText = "Style";
-    }
-
-  })
+  else if (scrollTop < 145) {
+    navbar.classList.add("expanded")
+  }
+  lastScroll = scrollTop;
 })
 
-// Price Slider js 
 
-const rangeInput = document.querySelectorAll(".range-input input"),
-  priceInput = document.querySelectorAll(".price-input input"),
-  range = document.querySelector(".slider .progress");
-let priceGap = 1000;
-
-priceInput.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minPrice = parseInt(priceInput[0].value),
-      maxPrice = parseInt(priceInput[1].value);
-
-    if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-      if (e.target.className === "input-min") {
-        rangeInput[0].value = minPrice;
-        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
-      } else {
-        rangeInput[1].value = maxPrice;
-        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-      }
-    }
-  });
-});
-
-rangeInput.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minVal = parseInt(rangeInput[0].value),
-      maxVal = parseInt(rangeInput[1].value);
-
-    if (maxVal - minVal < priceGap) {
-      if (e.target.className === "range-min") {
-        rangeInput[0].value = maxVal - priceGap;
-      } else {
-        rangeInput[1].value = minVal + priceGap;
-      }
-    } else {
-      priceInput[0].value = minVal;
-      priceInput[1].value = maxVal;
-      range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-      range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-    }
-  });
-});
-
-
-const priceBtn = document.querySelectorAll(".style-btn")[2],
-  priceSlider = document.querySelector(".price-slider");
-
-priceBtn.addEventListener("click", () => {
-  priceBtn.classList.toggle("open");
-});
-
-//Color Filter
-
-const colorBtn = document.querySelectorAll(".style-btn")[1],
-  color = document.querySelectorAll(".color");
-
-colorBtn.addEventListener("click", () => {
-  colorBtn.classList.toggle("open");
-});
-
-let colorChosen = "none";
-let colorText = document.querySelector(".color-btn-text");
-color.forEach(item => {
-  item.addEventListener("click", () => {
-    colorChosen = item.innerText;
-    if (colorChosen != "none") {
-      colorText.innerText = colorChosen;
-    }
-  })
+var navbtn = (document.querySelector("#header .nav-right-btn button"));
+console.log(navbtn);
+navbtn.addEventListener("click", () => {
+  navbar.classList.add("expanded")
 })
 
-//Sorting Filter
+var dropDownBtn = document.querySelector(".product-dropdown");
+var dropDown = document.querySelector("#header .navbar-nav .nav-item .drop-down");
+dropDownBtn.addEventListener("click", () => {
+  // console.log("clicked");
+  dropDown.classList.toggle("md");
 
-const sortBtn = document.querySelectorAll(".style-btn")[3],
-  sort = document.querySelectorAll(".sort");
-
-sortBtn.addEventListener("click", () => {
-  sortBtn.classList.toggle("open");
-});
-
-let sortChosen = "none";
-let sortText = document.querySelector(".sort-btn-text");
-sort.forEach(item => {
-  item.addEventListener("click", () => {
-    sortChosen = item.innerText;
-    if (sortChosen != "none") {
-      sortText.innerText = sortChosen;
-    }
-  })
 })
 
-//Side Menu
-
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
+var addToCart = document.querySelectorAll(".add-to-cart");
+for (var i = 0; i < addToCart.length; i++) {
+  addToCart[i].addEventListener("click", function () {
+    this.innerHTML = "Added to Cart";
+    this.style.backgroundColor = "#132043";
+    this.style.color = "white";
   });
 }
 
+//wishlist btn
 
-// toggle 
+var wishListButton = document.querySelectorAll(".wishlist-button-small");
+for (var i = 0; i < wishListButton.length; i++) {
+  wishListButton[i].addEventListener("click", function () {
+    this.innerHTML = '<i class="fa-solid fa-heart" style="color: #a45d47;"></i>';
+  })
+}
 
-var filter = document.querySelector(".filter-mob");
-var option = document.querySelector(".mobileShow-plist")
-filter.addEventListener("click", () => {
-  option.classList.toggle("f-clicked");
-})
+// wishlist button for mobile
 
-var sideMenuCloseBtn = document.querySelector(".close-side-menu");
-sideMenuCloseBtn.addEventListener("click", ()=>{
-  option.classList.remove("f-clicked");
-})
+var wishListButtonMob = document.querySelectorAll(".wishlist-button-small-mob")
+for (var i = 0; i < wishListButtonMob.length; i++) {
+  wishListButtonMob[i].addEventListener("click", function () {
+    this.innerHTML = "Added to Wishlist";
+    this.style.backgroundColor = "#a45d47";
+    this.style.color = "white";
+    this.style.opacity = ".6"
+  })
+}
 
-var sortFilter = document.querySelector(".sort-mob");
-sortFilter.addEventListener("click", () => {
-  option.classList.toggle("s-clicked");
-})
 
-var midMenuCloseBtn = document.querySelector(".close-mid-menu");
-midMenuCloseBtn.addEventListener("click", ()=>{
-  option.classList.remove("s-clicked");
-})
+
+

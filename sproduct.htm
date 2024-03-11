@@ -35,40 +35,74 @@
 
     <!--Navigation Section-->
     <section id="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top expanded">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo/trial 5.png" class="img-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo/brand-logo.png" class="brand-logo img-fluid">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                    <!-- button icon -->
-                    <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+                <form class="form-inline .d-none .d-sm-block">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
+                <div class="nav-right-btn">
 
-                </button>
+                    <a href="wishlist.html" class="nav-wishlist"><i class="fa-solid fa-heart"
+                            style="color: #ffffff;"></i>
+                    </a>
+
+                    <a href="cart-page.html" class="nav-cart">
+                        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                        <!-- button icon -->
+                        <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+
+                        <li class="nav-item product-dropdown">
+                            <a class="nav-link" href="#our-products">Our Products <i class="fa-solid fa-caret-down"
+                                    style="color: #ffffff;"></i></a>
+                            <ul class="drop-down">
+                                <a href="product-rings.html">
+                                    <li>Rings</li>
+                                </a>
+                                <a href="product-pendents.html">
+                                    <li>Pendents</li>
+                                </a>
+                                <a href="product-earrings.html">
+                                    <li>Earrings</li>
+                                </a>
+                                <a href="bracelets.html">
+                                    <li>Bracelets</li>
+                                </a>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sale.html">Sale</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="product-rings.html">Pendent</a>
+                            <a class="nav-link" href="wishlist.html">Wishlist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Earrings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bracelet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sale</a>
+                            <a class="nav-link" href="cart-page.html">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="register.html">My Account</a>
                         </li>
                     </ul>
                 </div>
+                <form class="form-mob form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
             </div>
         </nav>
     </section>
@@ -76,7 +110,7 @@
     <!-- Mobile View Buttons -->
 
     <div class="mobileShow">
-        <button class="buynow-mob">Buy Now</button>
+        <button class="buynow-mob" onclick="location.href='cart-page.html'">Buy Now</button>
         <button class="cart-mob">Add to Cart</button>
     </div>
 
@@ -85,8 +119,9 @@
     <section id="product-details" class="section-p1">
         <div class="container">
             <div class="single-product-img">
-                <img src="img/Products/Rings/01/1.png" width="100%" id="main-img" alt="main-img">
-
+                <div>
+                    <img id="main-img" src="img/Products/Rings/01/1.png" width="100%" id="main-img" alt="main-img">
+                </div>
                 <div class="mob-wishlist">
                     <button type="button" class="wishlist-button-small">
                         <i class="fa-regular fa-heart"></i>
@@ -95,16 +130,20 @@
 
                 <div class="small-img-grp">
                     <div class="small-img-col">
-                        <img src="img/Products/Rings/01/2.png" width="100%" class="small-img" alt="small-img">
+                        <img class="p-img" src="img/Products/Rings/01/1.png" width="100%" class="small-img"
+                            alt="small-img">
                     </div>
-                    <div class="small-img-col">
-                        <img src="img/Products/Rings/01/3.png" width="100%" class="small-img" alt="small-img">
+                    <div class="small-img-col unselected">
+                        <img class="p-img" src="img/Products/Rings/01/5.png" width="100%" class="small-img"
+                            alt="small-img">
                     </div>
-                    <div class="small-img-col">
-                        <img src="img/Products/Rings/01/4.png" width="100%" class="small-img" alt="small-img">
+                    <div class="small-img-col unselected">
+                        <img class="p-img" src="img/Products/Rings/01/4.png" width="100%" class="small-img"
+                            alt="small-img">
                     </div>
-                    <div class="small-img-col">
-                        <img src="img/Products/Rings/01/5.png" width="100%" class="small-img" alt="small-img">
+                    <div class="small-img-col unselected">
+                        <img class="p-img" src="img/Products/Rings/01/5.png" width="100%" class="small-img"
+                            alt="small-img">
                     </div>
                 </div>
             </div>
@@ -131,15 +170,16 @@
                         <option>4rem</option>
                         <option>4.5rem</option>
                     </select>
-                    <input type="number" value="1">
+                    <div id="incdec">
+                        <input class="quantity-input" type="text" value="0" />
+                        <i class="fa-solid fa-caret-up quant-up" style="color: #132043;"></i>
+                        <i class="fa-solid fa-caret-down quant-down" style="color: #132043;"></i>
+                    </div>
+                    <!-- Tryinggg !!  -->
+                    <button class="cart-button add-to-cart">
+                        Add to cart
+                    </button>
                 </div>
-                <!-- Tryinggg !!  -->
-                <button class="cart-button">
-                    <span class="add-to-cart">Add to cart</span>
-                    <span class="added">Added</span>
-                    <i class="fas fa-shopping-cart"></i>
-                    <i class="fas fa-box"></i>
-                </button>
 
                 <!-- <button class="cart-add">ADD TO CART <i class="fa-solid fa-cart-shopping"></i></button> -->
 
@@ -187,7 +227,6 @@
                 <div class="feature-icon"></div>
 
             </div>
-        </div>
         </div>
 
         <div class="product-descrp">
@@ -565,6 +604,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!--Bootstrap 5 js-->
 
+    <script src="individual-product.js"></script>
     <script src="main.js"></script>
 
 </body>

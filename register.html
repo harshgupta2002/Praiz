@@ -35,41 +35,70 @@
 
     <!--Navigation Section-->
     <section id="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top expanded">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo/trial 5.png" class="img-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo/brand-logo.png" class="brand-logo img-fluid">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                    <!-- button icon -->
-                    <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+                <form class="form-inline .d-none .d-sm-block">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
+                <div class="nav-right-btn">
+                    <a href="wishlist.html" class="nav-wishlist"><i class="fa-solid fa-heart"
+                            style="color: #ffffff;"></i></a>
+                    <a href="cart-page.html" class="nav-cart"><i class="fa-solid fa-cart-shopping"
+                            style="color: #ffffff;"></i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                </button>
+                        <!-- button icon -->
+                        <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pendent</a>
+                            <a class="nav-link" href="#our-products">Our Products <i class="fa-solid fa-caret-down"
+                                    style="color: #ffffff;"></i></a>
+                            <ul class="drop-down">
+                                <a href="#link">
+                                    <li>Rings</li>
+                                </a>
+                                <a href="#link">
+                                    <li>Pendents</li>
+                                </a>
+                                <a href="#link">
+                                    <li>Earrings</li>
+                                </a>
+                                <a href="#link">
+                                    <li>Bracelets</li>
+                                </a>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Earrings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bracelet</a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">Sale</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="myAccount.html">My Account</a>
+                            <a class="nav-link" href="#">Wishlist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cart-page.html">Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">My Account</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            <form class="form-mob form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+            </form>
         </nav>
     </section>
 
@@ -85,7 +114,7 @@
 
     <!-- Main Content -->
 
-    <section id="register">
+    <section id="register" style="margin-top: 12rem;">
         <!-- <div class="form-container">
             <div class="reg-img"></div>
             <div class="reg-form">

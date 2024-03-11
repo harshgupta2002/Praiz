@@ -35,40 +35,74 @@
 
     <!--Navigation Section-->
     <section id="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top expanded">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo/trial 5.png" class="img-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo/brand-logo.png" class="brand-logo img-fluid">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                    <!-- button icon -->
-                    <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+                <form class="form-inline .d-none .d-sm-block">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
+                <div class="nav-right-btn">
 
-                </button>
+                    <a href="wishlist.html" class="nav-wishlist"><i class="fa-solid fa-heart"
+                            style="color: #ffffff;"></i>
+                    </a>
+
+                    <a href="cart-page.html" class="nav-cart">
+                        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                        <!-- button icon -->
+                        <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#Home">Home</a>
+
+                        <li class="nav-item product-dropdown">
+                            <a class="nav-link" href="#our-products">Our Products <i class="fa-solid fa-caret-down"
+                                    style="color: #ffffff;"></i></a>
+                            <ul class="drop-down">
+                                <a href="product-rings.html">
+                                    <li>Rings</li>
+                                </a>
+                                <a href="product-pendents.html">
+                                    <li>Pendents</li>
+                                </a>
+                                <a href="product-earrings.html">
+                                    <li>Earrings</li>
+                                </a>
+                                <a href="bracelets.html">
+                                    <li>Bracelets</li>
+                                </a>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sale.html">Sale</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pendent</a>
+                            <a class="nav-link" href="wishlist.html">Wishlist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Earrings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bracelet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sale</a>
+                            <a class="nav-link" href="cart-page.html">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="register.html">My Account</a>
                         </li>
                     </ul>
                 </div>
+                <form class="form-mob form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
             </div>
         </nav>
     </section>
@@ -89,14 +123,15 @@
 
         <div class="mob-cart-page container d-block d-sm-none">
             <h5 class="text-center">Shopping Cart</h5>
+
             <div class="product-card ">
                 <div class="card">
                     <div class="card-left">
                         <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product-img">
                         <div class="quantity">
-                            <a href="#" class="quantity__minus"><span>-</span></a>
+                            <a href="#" class="quantity__minus"><span><i class="fa-solid fa-minus" style="color: #ffffff;"></i></span></a>
                             <input name="quantity" type="text" class="quantity__input" value="1">
-                            <a href="#" class="quantity__plus"><span>+</span></a>
+                            <a href="#" class="quantity__plus"><span><i class="fa-solid fa-plus" style="color: #ffffff;"></i></span></a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -115,9 +150,39 @@
                     </div>
                 </div>
                 <div class="card-btn">
-                    <a class="w-btn btn btn-primary"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>Add to
-                        Wishlist</a>
                     <a class="btn btn-primary"><i class="fa-solid fa-trash" style="color: #ffffff;"></i>Remove</a>
+                    <a class="w-btn btn btn-primary"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>Add to Wishlist</a>
+                </div>
+            </div>
+            
+            <div class="product-card ">
+                <div class="card">
+                    <div class="card-left">
+                        <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product-img">
+                        <div class="quantity">
+                            <a href="#" class="quantity__minus"><span><i class="fa-solid fa-minus" style="color: #ffffff;"></i></span></a>
+                            <input name="quantity" type="text" class="quantity__input" value="1">
+                            <a href="#" class="quantity__plus"><span><i class="fa-solid fa-plus" style="color: #ffffff;"></i></span></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title">Product Complete Name</h5></a>
+                        <div class="py-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div id="p-cost" style="line-height: normal;">
+                            <h6>&#8377; 489</h6>
+                        </div>
+                        <div id="p-color" style="line-height: normal;">Silver</div>
+                    </div>
+                </div>
+                <div class="card-btn">
+                    <a class="btn btn-primary"><i class="fa-solid fa-trash" style="color: #ffffff;"></i>Remove</a>
+                    <a class="w-btn btn btn-primary"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>Add to Wishlist</a>
                 </div>
             </div>
 
@@ -126,9 +191,9 @@
                     <div class="card-left">
                         <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product-img">
                         <div class="quantity">
-                            <a href="#" class="quantity__minus"><span>-</span></a>
+                            <a href="#" class="quantity__minus"><span><i class="fa-solid fa-minus" style="color: #ffffff;"></i></span></a>
                             <input name="quantity" type="text" class="quantity__input" value="1">
-                            <a href="#" class="quantity__plus"><span>+</span></a>
+                            <a href="#" class="quantity__plus"><span><i class="fa-solid fa-plus" style="color: #ffffff;"></i></span></a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -147,41 +212,8 @@
                     </div>
                 </div>
                 <div class="card-btn">
-                    <a class="w-btn btn btn-primary"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>Add to
-                        Wishlist</a>
                     <a class="btn btn-primary"><i class="fa-solid fa-trash" style="color: #ffffff;"></i>Remove</a>
-                </div>
-            </div>
-
-            <div class="product-card ">
-                <div class="card">
-                    <div class="card-left">
-                        <img src="img/Products/Rings/01/2.png" class="card-img-top" alt="product-img">
-                        <div class="quantity">
-                            <a href="#" class="quantity__minus"><span>-</span></a>
-                            <input name="quantity" type="text" class="quantity__input" value="1">
-                            <a href="#" class="quantity__plus"><span>+</span></a>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <a href="#"><h5 class="card-title">Product Complete Name</h5></a>
-                        <div class="py-1">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <div id="p-cost" style="line-height: normal;">
-                            <h6>&#8377; 489</h6>
-                        </div>
-                        <div id="p-color" style="line-height: normal;">Silver</div>
-                    </div>
-                </div>
-                <div class="card-btn">
-                    <a class="w-btn btn btn-primary"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>Add to
-                        Wishlist</a>
-                    <a class="btn btn-primary"><i class="fa-solid fa-trash" style="color: #ffffff;"></i>Remove</a>
+                    <a class="w-btn btn btn-primary"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>Add to Wishlist</a>
                 </div>
             </div>
 
@@ -353,7 +385,7 @@
                     <div class="total-amount">Total Amount: <span id="total-amount">&#8377; 1100</span></div>
                     <div class="check-btn">
                         <a href="checkout-page.html"><button type="button" class="checkout btn btn-outline-primary">Checkout</button></a>
-                        <button type="button" class="cont-shopping btn btn-outline-primary">Continue Shopping</button>
+                        <a href="index.html"><button type="button" class="cont-shopping btn btn-outline-primary">Continue Shopping</button></a>
                     </div>
                 </div>
             </div>

@@ -35,43 +35,73 @@
 
     <!--Navigation Section-->
     <section id="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top expanded">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo/trial 5.png" class="img-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo/brand-logo.png" class="brand-logo img-fluid">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                    <!-- button icon -->
-                    <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+                <form class="form-inline .d-none .d-sm-block">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
+                <div class="nav-right-btn">
+                    <a href="wishlist.html" class="nav-wishlist"><i class="fa-solid fa-heart"
+                            style="color: #ffffff;"></i></a>
+                    <a href="cart-page.html" class="nav-cart"><i class="fa-solid fa-cart-shopping"
+                            style="color: #ffffff;"></i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                </button>
+                        <!-- button icon -->
+                        <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+
+                        <li class="nav-item product-dropdown">
+                            <a class="nav-link" href="#our-products">Our Products <i class="fa-solid fa-caret-down"
+                                    style="color: #ffffff;"></i></a>
+                            <ul class="drop-down">
+                                <a href="product-rings.html">
+                                    <li>Rings</li>
+                                </a>
+                                <a href="product-pendents.html">
+                                    <li>Pendents</li>
+                                </a>
+                                <a href="product-earrings.html">
+                                    <li>Earrings</li>
+                                </a>
+                                <a href="bracelets.html">
+                                    <li>Bracelets</li>
+                                </a>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sale.html">Sale</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pendent</a>
+                            <a class="nav-link" href="wishlist.html">Wishlist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Earrings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bracelet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sale</a>
+                            <a class="nav-link" href="cart-page.html">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="register.html">My Account</a>
                         </li>
                     </ul>
                 </div>
+                <form class="form-mob form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
             </div>
         </nav>
     </section>
+
 
 
     <!-- Top Banner -->
@@ -89,7 +119,8 @@
                 <div class="page-left-top">
                     <h5 class="section-head fw-bold mb-3">Choose Address</h5>
                     <div class="address-opt">
-                        <div class="form-check">
+
+                        <div class="form-check selected">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                                 checked>
                             <label class="form-check-label" for="flexRadioDefault1">
@@ -102,6 +133,7 @@
                                 </div>
                             </label>
                         </div>
+
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                             <label class="form-check-label" for="flexRadioDefault2">
@@ -114,11 +146,12 @@
                                 </div>
                             </label>
                         </div>
-                        <div class="form-check">
+
+                        <div class="form-check new-add-form">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
                             <label class="form-check-label" for="flexRadioDefault3">
                                 <div class="address-container">
-                                    <span>New Address</span>
+                                    <span>New Address <span style="opacity: .8; margin-left: 1rem;">(Click to add)</span></span>
                                 </div>
                             </label>
                         </div>
@@ -189,10 +222,13 @@
                 <div class="page-left-bottom">
                     <h5 class="section-head fw-bold mb-3">Choose Payment Option</h5>
                     <div class="payment-opt">
+
+                        
                         <div class="row1">
+
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault">
+                                <label class="form-check-label">
                                     <div class="card-label">
                                         Cards 
                                     </div>
@@ -205,7 +241,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     <div class="card-label">
                                         Net Banking 

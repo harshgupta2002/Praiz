@@ -33,43 +33,77 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- Top Messege bar -->
-    
+
     <!--Navigation Section-->
     <section id="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top expanded">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo/trial 5.png" class="img-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo/brand-logo.png" class="brand-logo img-fluid">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                    <!-- button icon -->
-                    <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+                <form class="form-inline .d-none .d-sm-block">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
+                <div class="nav-right-btn">
 
-                </button>
+                    <a href="wishlist.html" class="nav-wishlist"><i class="fa-solid fa-heart"
+                            style="color: #ffffff;"></i>
+                    </a>
+
+                    <a href="cart-page.html" class="nav-cart">
+                        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                        <!-- button icon -->
+                        <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="sproduct.htm">Home</a>
+
+                        <li class="nav-item product-dropdown">
+                            <a class="nav-link" href="#our-products">Our Products <i class="fa-solid fa-caret-down"
+                                    style="color: #ffffff;"></i></a>
+                            <ul class="drop-down">
+                                <a href="product-rings.html">
+                                    <li>Rings</li>
+                                </a>
+                                <a href="product-pendents.html">
+                                    <li>Pendents</li>
+                                </a>
+                                <a href="product-earrings.html">
+                                    <li>Earrings</li>
+                                </a>
+                                <a href="bracelets.html">
+                                    <li>Bracelets</li>
+                                </a>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sale.html">Sale</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pendent</a>
+                            <a class="nav-link" href="wishlist.html">Wishlist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="product-rings.html">Earrings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bracelet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sale</a>
+                            <a class="nav-link" href="cart-page.html">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="register.html">My Account</a>
                         </li>
                     </ul>
                 </div>
+                <form class="form-mob form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
             </div>
         </nav>
     </section>
@@ -77,7 +111,50 @@
     <!-- Home Section -->
 
 
-    <section id="home" class="home pt-5 overflow-hidden">
+    <section id="home" class="home overflow-hidden">
+
+        <div class="mob-circular-menu">
+            <div class="container">
+                <a href="product-rings.html">
+                    <div class="product-1">
+                        <div class="circle">
+                        </div>
+                        <p class="product-name">Rings</p>
+                    </div>
+                </a>
+                <a href="product-pendents.html">
+                    <div class="product-2">
+                        <div class="circle">
+                        </div>
+                        <p class="product-name">Pendents</p>
+                    </div>
+                </a>
+                <a href="product-bracelets.html">
+                    <div class="product-3">
+                        <div class="circle">
+                        </div>
+                        <p class="product-name">Bracelets</p>
+                    </div>
+                </a>
+                <a href="product-earrings.html">
+                    <div class="product-4">
+                        <div class="circle">
+                        </div>
+                        <p class="product-name">Earrings</p>
+                    </div>
+                </a>
+                <a href="sets.html">
+                    <div class="product-5">
+                        <div class="circle">
+                        </div>
+                        <p class="product-name">Sets</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -91,27 +168,27 @@
                 <div class="carousel-item active">
                     <div class="home-banner home-banner-1">
                         <div class="home-banner-text">
-                            <h1>Women</h1>
-                            <h2>10% Discount for this Season</h2>
-                            <a href="#" class="btn btn-light text-uppercase mt-4">Our Products</a>
+                            <!-- <h1>Opening offers are live </h1> -->
+                            <!-- <h2>Enjoy exclusive discounts on our premier opening offers</h2> -->
+                            <!-- <a href="#" class="btn btn-light text-uppercase mt-4">Check it out</a> -->
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="home-banner home-banner-2">
                         <div class="home-banner-text">
-                            <h1>Men</h1>
-                            <h2>10% Discount for this Season</h2>
-                            <a href="#" class="btn btn-light text-uppercase mt-4">Our Products</a>
+                            <!-- <h1>SHOP OUR BEST SELLERS</h1> -->
+                            <!-- <h2> Get up to 70% Discounts</h2> -->
+                            <a href="sale.html" class="btn btn-light text-uppercase">Check it out </a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="home-banner home-banner-3">
                         <div class="home-banner-text">
-                            <h1>Shop All</h1>
-                            <h2>With Working Card & UPI</h2>
-                            <a href="#" class="btn btn-light text-uppercase mt-4">Our Products</a>
+                            <!-- <h1>Shop All</h1> -->
+                            <!-- <h2>With Working Card & UPI</h2> -->
+                            <!-- <a href="#" class="btn btn-light text-uppercase mt-4">Our Products</a> -->
                         </div>
                     </div>
                 </div>
@@ -129,16 +206,45 @@
         </div>
 
         <!-- Offer Zone -->
+        <div class="offers-mob">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 offer">
+                        <div class="offer-1">
+                            <!-- offer img in css  -->
+                        </div>
+                    </div>
+
+                    <div class="col-6 offer">
+                        <div class="offer-2">
+                            <!-- offer img in css  -->
+                        </div>
+                    </div>
+
+                    <div class="col-6 offer">
+                        <div class="offer-3">
+                            <!-- offer img in css  -->
+                        </div>
+                    </div>
+
+                    <div class="col-6 offer">
+                        <div class="offer-4">
+                            <!-- offer img in css  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="offers">
             <div class="container">
                 <div class="row">
                     <!-- Offer Box One -->
-                    <div class="col-sm-6 col-lg-4 mb-lg-0 mb-4">
+                    <div class="box-1 col-sm-6 col-lg-4 mb-lg-0 mb-4">
                         <a href="#">
                             <div class="offer-box text-center position-relative">
                                 <div class="offer-inner">
                                     <div class="offer-image position-relative overflow-hidden">
-                                        <img src="img/Offer Zone/3.png" alt="offers" class="img-fluid">
+                                        <img src="img/Banner/Offer-banner/left.png" alt="offers" class="img-fluid">
 
                                         <!-- OVERLAY -->
 
@@ -158,12 +264,12 @@
                     </div>
                     <!-- Offer Box Two -->
 
-                    <div class="col-sm-6 col-lg-4 mb-lg-0 mb-4 d-flex flex-column justify-content-between">
+                    <div class="box-2 col-sm-6 col-lg-4 mb-lg-0 mb-4 d-flex flex-column justify-content-between">
                         <a href="#">
                             <div class="offer-box text-center position-relative mb-4 mb-sm-0 mb-lg-0">
                                 <div class="offer-inner">
                                     <div class="offer-image position-relative overflow-hidden">
-                                        <img src="img/Offer Zone/5.jpg" alt="offers" class="img-fluid">
+                                        <img src="img/Banner/Offer-banner/top.png" alt="offers" class="img-fluid">
                                         <div class="offer-overlay"></div>
                                     </div>
                                     <div class="offer-info">
@@ -181,7 +287,7 @@
                             <div class="offer-box text-center position-relative">
                                 <div class="offer-inner">
                                     <div class="offer-image position-relative overflow-hidden">
-                                        <img src="img/Offer Zone/5.jpg" alt="offers" class="img-fluid">
+                                        <img src="img/Banner/Offer-banner/bottom.png" alt="offers" class="img-fluid">
                                         <div class="offer-overlay"></div>
                                     </div>
                                     <div class="offer-info">
@@ -198,12 +304,12 @@
                     </div>
                     <!-- Offer Box Three -->
 
-                    <div class="col-sm-12 col-lg-4 mb-lg-0 mb-4">
+                    <div class="box-3 col-sm-12 col-lg-4 mb-lg-0 mb-4">
                         <a href="#">
                             <div class="offer-box text-center position-relative">
                                 <div class="offer-inner">
                                     <div class="offer-image position-relative overflow-hidden">
-                                        <img src="img/Offer Zone/3.png" alt="offers" class="img-fluid">
+                                        <img src="img/Banner/Offer-banner/right.png" alt="offers" class="img-fluid">
                                         <div class="offer-overlay"></div>
                                     </div>
                                     <div class="offer-info">
@@ -230,245 +336,444 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="headline text-center mb-5">
-                        <h2 class="pb-3 position-relative d-inline-block">Featured Products</h2>
+                    <div class="headline text-center">
+                        <h2 class="pb-2 position-relative d-inline-block">Featured Products</h2>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-6 col-sm-6 col-lg-4">
-                    <a href="#" class="d-block text-center mb-4">
-                        <div class="product-list">
-                            <div class="product-image position-relative">
-                                <span class="sale">Sale</span>
-                                <img src="img/Products/2.png" alt="products" class="img-fluid product-image-first">
-                                <img src="img/Products/1.png" alt="products" class="img-fluid product-image-secondary">
-                            </div>
-                            <div class="product-name pt-3">
-                                <h3 class="text-capitalize">Winter Long Sleeve Black White</h3>
-                                <p class="mb-0 amount">&#8377;400 <del>&#8377;400</del></p>
-                                <div class="py-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <button type="button" class="add-to-cart">ADD TO CART</button>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-sm-6 col-lg-4">
-                    <a href="#" class="d-block text-center mb-4">
-                        <div class="product-list">
-                            <div class="product-image position-relative">
+            <div class="row featured-product">
 
-                                <img src="img/Products/6.png" alt="products" class="img-fluid product-image-first">
-                                <img src="img/Products/5.png" alt="products" class="img-fluid product-image-secondary">
-                            </div>
-                            <div class="product-name pt-3">
-                                <h3 class="text-capitalize">Winter Long Sleeve Black White</h3>
-                                <p class="mb-0 amount">&#8377;400 <del>&#8377;400</del></p>
-                                <div class="py-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <button type="button" class="add-to-cart">ADD TO CART</button>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-sm-6 col-lg-4">
-                    <a href="#" class="d-block text-center mb-4">
-                        <div class="product-list">
-                            <div class="product-image position-relative">
+                <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
 
-                                <img src="img/Products/4.png" alt="products" class="img-fluid product-image-first">
-                                <img src="img/Products/3.png" alt="products" class="img-fluid product-image-secondary">
+                    <div class="product-card">
+                        <a href="sproduct.htm">
+                            <div class="product-img">
+                                <span class="discount-tag">50% off</span>
+                                <img src="img/Products/Rings/02/5.jpg" class="product-thumb" alt="similar-product">
+                                <img src="img/Products/1.png" alt="similar-product-s" class="img-fluid product-thumb-s">
                             </div>
-                            <div class="product-name pt-3">
-                                <h3 class="text-capitalize">Winter Long Sleeve Black White</h3>
-                                <p class="mb-0 amount">&#8377;400 <del>&#8377;400</del></p>
-                                <div class="py-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <button type="button" class="add-to-cart">ADD TO CART</button>
+                        </a>
+                        <div class="product-info">
+                            <a href="#">
+                                <div class="product-name">Product Name Product</div>
+                            </a>
+                            <div class="product-price">&#8377 599</span>
+                                <span class="product-price"><del>&#8377 599</del></span>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-sm-6 col-lg-4">
-                    <a href="#" class="d-block text-center mb-4">
-                        <div class="product-list">
-                            <div class="product-image position-relative">
 
-                                <img src="img/Products/2.png" alt="products" class="img-fluid product-image-first">
-                                <img src="img/Products/1.png" alt="products" class="img-fluid product-image-secondary">
+                            <div class="py-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
                             </div>
-                            <div class="product-name pt-3">
-                                <h3 class="text-capitalize">Winter Long Sleeve Black White</h3>
-                                <p class="mb-0 amount">&#8377;400 <del>&#8377;400</del></p>
-                                <div class="py-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <button type="button" class="add-to-cart">ADD TO CART</button>
+                            <div class="card-big-btn">
+                                <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                    Cart</button>
+                                <button type="button" class="wishlist-button-small">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button"
+                                    class="card-btn wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="col-6 col-sm-6 col-lg-4">
-                    <a href="#" class="d-block text-center mb-4">
-                        <div class="product-list">
-                            <div class="product-image position-relative">
-                                <span class="sale">Sale</span>
 
-                                <img src="img/Products/6.png" alt="products" class="img-fluid product-image-first">
-                                <img src="img/Products/5.png" alt="products" class="img-fluid product-image-secondary">
-                            </div>
-                            <div class="product-name pt-3">
-                                <h3 class="text-capitalize">Winter Long Sleeve Black White</h3>
-                                <p class="mb-0 amount">&#8377;400 <del>&#8377;400</del></p>
-                                <div class="py-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <button type="button" class="add-to-cart">ADD TO CART</button>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="col-6 col-sm-6 col-lg-4">
-                    <a href="#" class="d-block text-center mb-4">
-                        <div class="product-list">
-                            <div class="product-image position-relative">
 
-                                <img src="img/Products/4.png" alt="products" class="img-fluid product-image-first">
-                                <img src="img/Products/5.png" alt="products" class="img-fluid product-image-secondary">
+                <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="product-card">
+                        <a href="#">
+                            <div class="product-img">
+                                <span class="discount-tag">50% off</span>
+                                <img src="img/Products/5.png" class="product-thumb" alt="similar-product">
+                                <img src="img/Products/1.png" alt="similar-product-s" class="img-fluid product-thumb-s">
                             </div>
-                            <div class="product-name pt-3">
-                                <h3 class="text-capitalize">Winter Long Sleeve Black White</h3>
-                                <p class="mb-0 amount">&#8377;400 <del>&#8377;400</del></p>
-                                <div class="py-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <button type="button" class="add-to-cart">ADD TO CART</button>
+                        </a>
+                        <div class="product-info">
+                            <a href="#">
+                                <div class="product-name">Product Name Product</div>
+                            </a>
+                            <div class="product-price">&#8377 599</span>
+                                <span class="product-price"><del>&#8377 599</del></span>
+                            </div>
+
+                            <div class="py-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="card-big-btn">
+                                <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                    Cart</button>
+                                <button type="button" class="wishlist-button-small">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button"
+                                    class="card-btn wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
                             </div>
                         </div>
-                    </a>
+
+                    </div>
                 </div>
+
+                <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="product-card">
+                        <a href="#">
+                            <div class="product-img">
+                                <span class="discount-tag">50% off</span>
+                                <img src="img/Products/Rings/02/5.jpg" class="product-thumb" alt="similar-product">
+                                <img src="img/Products/1.png" alt="similar-product-s" class="img-fluid product-thumb-s">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <a href="#">
+                                <div class="product-name">Product Name Product</div>
+                            </a>
+                            <div class="product-price">&#8377 599</span>
+                                <span class="product-price"><del>&#8377 599</del></span>
+                            </div>
+
+                            <div class="py-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="card-big-btn">
+                                <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                    Cart</button>
+                                <button type="button" class="wishlist-button-small">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button"
+                                    class="card-btn wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="product-card">
+                        <a href="#">
+                            <div class="product-img">
+                                <span class="discount-tag">50% off</span>
+                                <img src="img/Products/Rings/02/5.jpg" class="product-thumb" alt="similar-product">
+                                <img src="img/Products/1.png" alt="similar-product-s" class="img-fluid product-thumb-s">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <a href="#">
+                                <div class="product-name">Product Name Product</div>
+                            </a>
+                            <div class="product-price">&#8377 599</span>
+                                <span class="product-price"><del>&#8377 599</del></span>
+                            </div>
+
+                            <div class="py-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="card-big-btn">
+                                <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                    Cart</button>
+                                <button type="button" class="wishlist-button-small">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button"
+                                    class="card-btn wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="product-card">
+                        <a href="#">
+                            <div class="product-img">
+                                <span class="discount-tag">50% off</span>
+                                <img src="img/Products/Rings/02/5.jpg" class="product-thumb" alt="similar-product">
+                                <img src="img/Products/1.png" alt="similar-product-s" class="img-fluid product-thumb-s">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <a href="#">
+                                <div class="product-name">Product Name Product Name </div>
+                            </a>
+                            <div class="product-price">&#8377 599</span>
+                                <span class="product-price"><del>&#8377 599</del></span>
+                            </div>
+
+                            <div class="py-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="card-big-btn">
+                                <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                    Cart</button>
+                                <button type="button" class="wishlist-button-small">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button"
+                                    class="card-btn wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="product-card">
+                        <a href="#">
+                            <div class="product-img">
+                                <span class="discount-tag">50% off</span>
+                                <img src="img/Products/Rings/02/5.jpg" class="product-thumb" alt="similar-product">
+                                <img src="img/Products/1.png" alt="similar-product-s" class="img-fluid product-thumb-s">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <a href="#">
+                                <div class="product-name">Product Name Product</div>
+                            </a>
+                            <div class="product-price">&#8377 599</span>
+                                <span class="product-price"><del>&#8377 599</del></span>
+                            </div>
+
+                            <div class="py-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="card-big-btn">
+                                <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                    Cart</button>
+                                <button type="button" class="wishlist-button-small">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button"
+                                    class="card-btn wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="product-card">
+                        <a href="#">
+                            <div class="product-img">
+                                <span class="discount-tag">50% off</span>
+                                <img src="img/Products/Rings/02/5.jpg" class="product-thumb" alt="similar-product">
+                                <img src="img/Products/1.png" alt="similar-product-s" class="img-fluid product-thumb-s">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <a href="#">
+                                <div class="product-name">Product Name Product</div>
+                            </a>
+                            <div class="product-price">&#8377 599</span>
+                                <span class="product-price"><del>&#8377 599</del></span>
+                            </div>
+
+                            <div class="py-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="card-big-btn">
+                                <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                    Cart</button>
+                                <button type="button" class="wishlist-button-small">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button"
+                                    class="card-btn wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+
+                    <div class="product-card">
+                        <a href="#">
+                            <div class="product-img">
+                                <span class="discount-tag">50% off</span>
+                                <img src="img/Products/Rings/02/5.jpg" class="product-thumb" alt="similar-product">
+                                <img src="img/Products/1.png" alt="similar-product-s" class="img-fluid product-thumb-s">
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <a href="#">
+                                <div class="product-name">Product Name Product</div>
+                            </a>
+                            <div class="product-price">&#8377 599</span>
+                                <span class="product-price"><del>&#8377 599</del></span>
+                            </div>
+
+                            <div class="py-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="card-big-btn">
+                                <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                    Cart</button>
+                                <button type="button" class="wishlist-button-small">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button"
+                                    class="card-btn wishlist-button-small-mob btn btn-outline-primary">Add to
+                                    Wishlist</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
             </div>
             <!-- Lower Banner -->
-            <div class="overflow-hidden my-5">
+            <div class="lower-banner">
                 <div class="row">
                     <div class="col-sm-12 up-to-off">
-                        <img src="img/Banner/Lower Banner/banner 01.png" alt="offers" class="img-fluid w-100">
-                        <div class="up-to-content">
+                        <div class="off-banner">
+                            <img src="img/Banner/Lower Banner/banner 01.png" alt="offers" class="img-fluid w-100 first">
+                            <!-- <img src="img/Banner/Lower Banner/banner-mob.png" alt="offers" class="img-fluid w-100 second-mob"> -->
                         </div>
                     </div>
                 </div>
                 <div class="lower-hashtag">
                     <div class="row">
-                        <div class="col-sm-12 col-lg-6 quote text-center">
+                        <div class="col-sm-6 col-lg-6 quote text-center">
                             <div class="hashtag-section">
-                                <img src="img/Banner/Lower Banner 2/hashtag3.png" alt="hashtag" class="hashtag-image">
+                                <img src="img/Banner/Lower Banner 2/lower.png" alt="hashtag" class="hashtag-image">
                             </div>
-
-                            <!-- TESTIMONIAL  LG SCREEN-->
-
-                            <div class="testimonial">
-                                <div class="row text-center">
-                                    <div class="col-md-12">
-                                        <!-- Carousel wrapper -->
-                                        <div id="carouselBasicExample" class="carousel slide carousel-dark"
-                                            data-mdb-ride="carousel">
-                                            <!-- Inner -->
-                                            <div class="carousel-inner">
-                                                <!-- Single item -->
-                                                <div class="carousel-item active">
-                                                    <p class="lead font-italic mx-4 mx-md-5">
-                                                        "Neque cupiditate assumenda in maiores repudiandae mollitia
-                                                        adipisci maiores
-                                                        repudiandae mollitia consectetur"
-                                                    </p>
-                                                    <p class="text-muted mb-0">- Anna Morian</p>
-                                                </div>
-
-                                                <!-- Single item -->
-                                                <div class="carousel-item">
-                                                    <p class="lead font-italic mx-4 mx-md-5">
-                                                        "Neque cupiditate assumenda in maiores repudiandae mollitia
-                                                        adipisci maiores
-                                                        repudiandae mollitia consectetur"
-                                                    </p>
-
-                                                    <p class="text-muted mb-0">- Teresa May</p>
-                                                </div>
-
-                                                <!-- Single item -->
-                                                <div class="carousel-item">
-                                                    <p class="lead font-italic mx-4 mx-md-5">
-                                                        "Neque cupiditate assumenda in maiores repudiandae mollitia
-                                                        adipisci maiores
-                                                        repudiandae mollitia consectetur"
-                                                    </p>
-
-                                                    <p class="text-muted mb-0">- Kate Allise</p>
-                                                </div>
-                                            </div>
-                                            <!-- Inner -->
-
-                                            <!-- Controls -->
-                                            <button class="carousel-control-prev" type="button"
-                                                data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
-                                            </button>
-                                            <button class="carousel-control-next" type="button"
-                                                data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Next</span>
-                                            </button>
-                                        </div>
-                                        <!-- Carousel wrapper -->
+                        </div>
+                        <div class="col-sm-6 col-lg-6 sign-up">
+                            <div class="sign-up-right">
+                                <h2>Sign Up for 20% off</h2>
+                                <p>Join the <b>Praiz</b> community to receive exclusive early access to sales,
+                                    new collections and more. Plus you'll get 10% off your first order.
+                                </p>
+                                <div class="sign-up-section">
+                                    <div class="email-box">
+                                        <input type="email" id="email" name="emai-id" size="40"
+                                            placeholder="Enter your email">
+                                    </div>
+                                    <div class="sign-up-button">
+                                        <button type="button" class="btn btn-success">Sign Up</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-6 sign-up">
-                            <h2>Sign Up for 20% off</h2>
-                            <p>Join the <b>Praiz</b> community to receive exclusive early access to sales,
-                                new collections and more. Plus you'll get 10% off your first order.
-                            </p>
-                            <div class="email-box">
-                                <input type="email" id="email" name="emai-id" size="40" placeholder="Enter your email">
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL  LG SCREEN-->
+
+                <div class="testimonial">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <!-- Carousel wrapper -->
+                            <div id="carouselBasicExample" class="carousel slide carousel-dark"
+                                data-mdb-ride="carousel">
+                                <h5>what people say about us...</h5>
+                                <!-- Inner -->
+                                <div class="carousel-inner">
+                                    <!-- Single item -->
+                                    <div class="carousel-item active">
+                                        <p class="lead font-italic">
+                                            "Neque cupiditate assumenda in maiores repudiandae mollitia
+                                            adipisci maiores
+                                            repudiandae mollitia consectetur"
+                                        </p>
+                                        <p class="text-muted mb-0">- Anna Morian</p>
+                                    </div>
+
+                                    <!-- Single item -->
+                                    <div class="carousel-item">
+                                        <p class="lead font-italic mx-4 mx-md-5">
+                                            "Neque cupiditate assumenda in maiores repudiandae mollitia
+                                            adipisci maiores
+                                            repudiandae mollitia consectetur"
+                                        </p>
+
+                                        <p class="text-muted mb-0">- Teresa May</p>
+                                    </div>
+
+                                    <!-- Single item -->
+                                    <div class="carousel-item">
+                                        <p class="lead font-italic mx-4 mx-md-5">
+                                            "Neque cupiditate assumenda in maiores repudiandae mollitia
+                                            adipisci maiores
+                                            repudiandae mollitia consectetur"
+                                        </p>
+
+                                        <p class="text-muted mb-0">- Kate Allise</p>
+                                    </div>
+                                </div>
+                                <!-- Inner -->
+
+                                <!-- Controls -->
+                                <button class="carousel-control-prev" type="button"
+                                    data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                            <div class="sign-up-button">
-                                <button type="button" class="btn btn-success">Sign Up</button>
-                            </div>
+                            <!-- Carousel wrapper -->
                         </div>
                     </div>
                 </div>
+
             </div>
     </section>
+
+
     <!-- Footer -->
     <footer class="text-center text-lg-start">
         <!-- Section: Social media -->

@@ -35,40 +35,69 @@
 
     <!--Navigation Section-->
     <section id="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top expanded">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo/trial 5.png" class="img-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo/brand-logo.png" class="brand-logo img-fluid">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                    <!-- button icon -->
-                    <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+                <form class="form-inline .d-none .d-sm-block">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
+                <div class="nav-right-btn">
+                    <a href="wishlist.html" class="nav-wishlist"><i class="fa-solid fa-heart"
+                            style="color: #ffffff;"></i></a>
+                    <a href="cart-page.html" class="nav-cart"><i class="fa-solid fa-cart-shopping"
+                            style="color: #ffffff;"></i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                </button>
+                        <!-- button icon -->
+                        <i class="fa-solid fa-bars" style="color: #eceff4;"></i>
+
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#Home">Home</a>
+
+                        <li class="nav-item product-dropdown">
+                            <a class="nav-link" href="#our-products">Our Products <i class="fa-solid fa-caret-down"
+                                    style="color: #ffffff;"></i></a>
+                            <ul class="drop-down">
+                                <a href="product-rings.html">
+                                    <li>Rings</li>
+                                </a>
+                                <a href="product-pendents.html">
+                                    <li>Pendents</li>
+                                </a>
+                                <a href="product-earrings.html">
+                                    <li>Earrings</li>
+                                </a>
+                                <a href="bracelets.html">
+                                    <li>Bracelets</li>
+                                </a>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sale.html">Sale</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pendent</a>
+                            <a class="nav-link" href="wishlist.html">Wishlist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Earrings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bracelet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sale</a>
+                            <a class="nav-link" href="cart-page.html">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="register.html">My Account</a>
                         </li>
                     </ul>
                 </div>
+                <form class="form-mob form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
             </div>
         </nav>
     </section>
@@ -245,7 +274,7 @@
                         <li class="color color2">Gold</li>
                         <li class="color color3">Black</li>
                         <li class="color colorAll">All Colours</li>
-                        
+
                     </ul>
                 </div>
 
@@ -350,12 +379,16 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
 
-                                <button type="button" class="btn btn-outline-primary card-btn">Add to Cart</button>
-                                <button type="button" class="wishlist-button-small">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
-                                    Wishlist</button>
+                                <div class="card-big-btn">
+                                    <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                        Cart</button>
+                                    <button type="button" class="wishlist-button-small">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add
+                                        to
+                                        Wishlist</button>
+                                </div>
                             </div>
 
                         </div>
@@ -388,12 +421,16 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
 
-                                <button type="button" class="btn btn-outline-primary card-btn">Add to Cart</button>
-                                <button type="button" class="wishlist-button-small">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
-                                    Wishlist</button>
+                                <div class="card-big-btn">
+                                    <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                        Cart</button>
+                                    <button type="button" class="wishlist-button-small">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add
+                                        to
+                                        Wishlist</button>
+                                </div>
                             </div>
 
                         </div>
@@ -426,12 +463,16 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
 
-                                <button type="button" class="btn btn-outline-primary card-btn">Add to Cart</button>
-                                <button type="button" class="wishlist-button-small">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
-                                    Wishlist</button>
+                                <div class="card-big-btn">
+                                    <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                        Cart</button>
+                                    <button type="button" class="wishlist-button-small">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add
+                                        to
+                                        Wishlist</button>
+                                </div>
                             </div>
 
                         </div>
@@ -464,12 +505,16 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
 
-                                <button type="button" class="btn btn-outline-primary card-btn">Add to Cart</button>
-                                <button type="button" class="wishlist-button-small">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
-                                    Wishlist</button>
+                                <div class="card-big-btn">
+                                    <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                        Cart</button>
+                                    <button type="button" class="wishlist-button-small">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add
+                                        to
+                                        Wishlist</button>
+                                </div>
                             </div>
 
                         </div>
@@ -502,12 +547,16 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
 
-                                <button type="button" class="btn btn-outline-primary card-btn">Add to Cart</button>
-                                <button type="button" class="wishlist-button-small">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
-                                    Wishlist</button>
+                                <div class="card-big-btn">
+                                    <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                        Cart</button>
+                                    <button type="button" class="wishlist-button-small">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add
+                                        to
+                                        Wishlist</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -539,12 +588,16 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
 
-                                <button type="button" class="btn btn-outline-primary card-btn">Add to Cart</button>
-                                <button type="button" class="wishlist-button-small">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
-                                    Wishlist</button>
+                                <div class="card-big-btn">
+                                    <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                        Cart</button>
+                                    <button type="button" class="wishlist-button-small">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add
+                                        to
+                                        Wishlist</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -576,12 +629,16 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
 
-                                <button type="button" class="btn btn-outline-primary card-btn">Add to Cart</button>
-                                <button type="button" class="wishlist-button-small">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
-                                    Wishlist</button>
+                                <div class="card-big-btn">
+                                    <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                        Cart</button>
+                                    <button type="button" class="wishlist-button-small">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add
+                                        to
+                                        Wishlist</button>
+                                </div>
                             </div>
 
                         </div>
@@ -614,12 +671,18 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
 
-                                <button type="button" class="btn btn-outline-primary card-btn">Add to Cart</button>
-                                <button type="button" class="wishlist-button-small">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add to
-                                    Wishlist</button>
+
+                                <div class="card-big-btn">
+                                    <button type="button" class="btn btn-outline-primary card-btn add-to-cart">Add to
+                                        Cart</button>
+                                    <button type="button" class="wishlist-button-small">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="wishlist-button-small-mob btn btn-outline-primary">Add
+                                        to
+                                        Wishlist</button>
+                                </div>
+
                             </div>
 
                         </div>
@@ -637,90 +700,107 @@
         </div>
     </section>
 
-    <section id="products">
+    <section id="products" class="products">
 
         <div class="overflow-hidden container">
-            <div class="lower-hashtag">
+            <div class="lower-banner">
                 <div class="row">
-                    <div class="col-sm-12 col-lg-6 quote text-center">
-                        <div class="hashtag-section">
-                            <img src="img/Banner/Lower Banner 2/hashtag3.png" alt="hashtag" class="hashtag-image">
+                    <div class="col-sm-12 up-to-off">
+                        <div class="off-banner">
+                            <img src="img/Banner/Lower Banner/banner 01.png" alt="offers" class="img-fluid w-100 first">
+                            <!-- <img src="img/Banner/Lower Banner/banner-mob.png" alt="offers" class="img-fluid w-100 second-mob"> -->
                         </div>
-
-                        <!-- TESTIMONIAL  LG SCREEN-->
-
-                        <div class="testimonial">
-                            <div class="row text-center">
-                                <div class="col-md-12">
-                                    <!-- Carousel wrapper -->
-                                    <div id="carouselBasicExample" class="carousel slide carousel-dark"
-                                        data-mdb-ride="carousel">
-                                        <!-- Inner -->
-                                        <div class="carousel-inner">
-                                            <!-- Single item -->
-                                            <div class="carousel-item active">
-                                                <p class="lead font-italic mx-4 mx-md-5">
-                                                    "Neque cupiditate assumenda in maiores repudiandae mollitia
-                                                    adipisci maiores
-                                                    repudiandae mollitia consectetur"
-                                                </p>
-                                                <p class="text-muted mb-0">- Anna Morian</p>
-                                            </div>
-
-                                            <!-- Single item -->
-                                            <div class="carousel-item">
-                                                <p class="lead font-italic mx-4 mx-md-5">
-                                                    "Neque cupiditate assumenda in maiores repudiandae mollitia
-                                                    adipisci maiores
-                                                    repudiandae mollitia consectetur"
-                                                </p>
-
-                                                <p class="text-muted mb-0">- Teresa May</p>
-                                            </div>
-
-                                            <!-- Single item -->
-                                            <div class="carousel-item">
-                                                <p class="lead font-italic mx-4 mx-md-5">
-                                                    "Neque cupiditate assumenda in maiores repudiandae mollitia
-                                                    adipisci maiores
-                                                    repudiandae mollitia consectetur"
-                                                </p>
-
-                                                <p class="text-muted mb-0">- Kate Allise</p>
-                                            </div>
-                                        </div>
-                                        <!-- Inner -->
-
-                                        <!-- Controls -->
-                                        <button class="carousel-control-prev" type="button"
-                                            data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button"
-                                            data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
+                    </div>
+                </div>
+                <div class="lower-hashtag">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-6 quote text-center">
+                            <div class="hashtag-section">
+                                <img src="img/Banner/Lower Banner 2/lower.png" alt="hashtag" class="hashtag-image">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6 sign-up">
+                            <div class="sign-up-right">
+                                <h2>Sign Up for 20% off</h2>
+                                <p>Join the <b>Praiz</b> community to receive exclusive early access to sales,
+                                    new collections and more. Plus you'll get 10% off your first order.
+                                </p>
+                                <div class="sign-up-section">
+                                    <div class="email-box">
+                                        <input type="email" id="email" name="emai-id" size="40"
+                                            placeholder="Enter your email">
                                     </div>
-                                    <!-- Carousel wrapper -->
+                                    <div class="sign-up-button">
+                                        <button type="button" class="btn btn-success">Sign Up</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-6 sign-up">
-                        <h2>Sign Up for 20% off</h2>
-                        <p>Join the <b>Praiz</b> community to receive exclusive early access to sales,
-                            new collections and more. Plus you'll get 10% off your first order.
-                        </p>
-                        <div class="email-box">
-                            <input type="email" id="email" name="emai-id" size="40" placeholder="Enter your email">
-                        </div>
-                        <div class="sign-up-button">
-                            <button type="button" class="btn btn-success">Sign Up</button>
+                </div>
+
+                <!-- TESTIMONIAL  LG SCREEN-->
+
+                <div class="testimonial">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <!-- Carousel wrapper -->
+                            <div id="carouselBasicExample" class="carousel slide carousel-dark"
+                                data-mdb-ride="carousel">
+                                <h5>what people say about us...</h5>
+                                <!-- Inner -->
+                                <div class="carousel-inner">
+                                    <!-- Single item -->
+                                    <div class="carousel-item active">
+                                        <p class="lead font-italic">
+                                            "Neque cupiditate assumenda in maiores repudiandae mollitia
+                                            adipisci maiores
+                                            repudiandae mollitia consectetur"
+                                        </p>
+                                        <p class="text-muted mb-0">- Anna Morian</p>
+                                    </div>
+
+                                    <!-- Single item -->
+                                    <div class="carousel-item">
+                                        <p class="lead font-italic mx-4 mx-md-5">
+                                            "Neque cupiditate assumenda in maiores repudiandae mollitia
+                                            adipisci maiores
+                                            repudiandae mollitia consectetur"
+                                        </p>
+
+                                        <p class="text-muted mb-0">- Teresa May</p>
+                                    </div>
+
+                                    <!-- Single item -->
+                                    <div class="carousel-item">
+                                        <p class="lead font-italic mx-4 mx-md-5">
+                                            "Neque cupiditate assumenda in maiores repudiandae mollitia
+                                            adipisci maiores
+                                            repudiandae mollitia consectetur"
+                                        </p>
+
+                                        <p class="text-muted mb-0">- Kate Allise</p>
+                                    </div>
+                                </div>
+                                <!-- Inner -->
+
+                                <!-- Controls -->
+                                <button class="carousel-control-prev" type="button"
+                                    data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <!-- Carousel wrapper -->
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -846,6 +926,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!--Bootstrap 5 js-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="single-prod.js"></script>
     <script src="main.js"></script>
 
 </body>
