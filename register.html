@@ -35,7 +35,23 @@
 
     <!--Navigation Section-->
     <section id="header">
+
+        <div class="top-bar d-none d-lg-flex">
+            <div class="announcement-bar">
+                Buy for 3499 and get 15% OFF. Code: LOVE
+            </div>
+
+        </div>
+        
         <nav class="navbar navbar-expand-lg fixed-top expanded">
+
+            <div class="top-bar d-md-flex d-lg-none">
+                <div class="announcement-bar">
+                    Buy for 3499 and get 15% OFF. Code: LOVE
+                </div>
+    
+            </div>
+
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <img src="img/logo/brand-logo.png" class="brand-logo img-fluid">
@@ -46,10 +62,15 @@
                     <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
                 </form>
                 <div class="nav-right-btn">
+
                     <a href="wishlist.html" class="nav-wishlist"><i class="fa-solid fa-heart"
-                            style="color: #ffffff;"></i></a>
-                    <a href="cart-page.html" class="nav-cart"><i class="fa-solid fa-cart-shopping"
-                            style="color: #ffffff;"></i></a>
+                            style="color: #ffffff;"></i>
+                    </a>
+
+                    <a href="cart-page.html" class="nav-cart">
+                        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    </a>
+
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -61,44 +82,175 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#our-products">Our Products <i class="fa-solid fa-caret-down"
-                                    style="color: #ffffff;"></i></a>
+                        <li class="nav-item product-dropdown">
+                            <a class="nav-link product-dropdown-btn" href="#our-products">Our Products 
+                                <i class="fa-solid fa-caret-right" style="color: #ffffff;"></i></a>
                             <ul class="drop-down">
-                                <a href="#link">
-                                    <li>Rings</li>
+                                <a class="necklace">
+                                    <li>
+                                        <span>Necklace</span>
+                                        <i class="fa-solid fa-caret-right" style="color: #ffffff;"></i>
+                                    </li>
+
                                 </a>
-                                <a href="#link">
-                                    <li>Pendents</li>
+
+                                <ul class="sub-drop drop-down-necklace">
+                                    <a href="necklace.html"><h6>All Necklaces</h6></a>
+                                    <h6>Shop by Colour</h6>
+                                    <a href="necklace.html"><li>Silver</li></a>
+                                    <a href="necklace.html"><li>Gold</li></a>
+                                    <a href="necklace.html"><li>Rose Gold</li></a>
+                                    <h6>Shop by Style</h6>
+                                    <a href="necklace.html"><li>Casual</li></a>
+                                    <a href="necklace.html"><li>Party</li></a>
+                                    <a href="necklace.html"><li>Office</li></a>
+                                    <a href="necklace.html"><li>Traditional</li></a>
+    
+                                </ul>
+                                
+                                <a class="earring">
+                                    <li>
+                                        <span>Earrings</span>
+                                        <i class="fa-solid fa-caret-right" style="color: #ffffff;"></i>
+
+                                    </li>
                                 </a>
-                                <a href="#link">
-                                    <li>Earrings</li>
+
+                                <ul class="sub-drop drop-down-earring">
+                                    <a href="necklace.html"><h6>All Earrings</h6></a>
+                                    <h6>Shop by Colour</h6>
+                                    <a href="necklace.html"><li>Silver</li></a>
+                                    <a href="necklace.html"><li>Gold</li></a>
+                                    <a href="necklace.html"><li>Rose Gold</li></a>
+                                    <h6>Shop by Style</h6>
+                                    <a href="necklace.html"><li>Casual</li></a>
+                                    <a href="necklace.html"><li>Party</li></a>
+                                    <a href="necklace.html"><li>Office</li></a>
+                                    <a href="necklace.html"><li>Traditional</li></a>
+    
+                                </ul>
+
+                                <a class="ring">
+                                    <li>
+                                        <span>Rings</span>
+                                        <i class="fa-solid fa-caret-right" style="color: #ffffff;"></i>
+                                    </li>
                                 </a>
-                                <a href="#link">
-                                    <li>Bracelets</li>
+
+                                <ul class="sub-drop drop-down-ring">
+                                    <a href="necklace.html"><h6>All Rings</h6></a>
+                                    <h6>Shop by Colour</h6>
+                                    <a href="necklace.html"><li>Silver</li></a>
+                                    <a href="necklace.html"><li>Gold</li></a>
+                                    <a href="necklace.html"><li>Rose Gold</li></a>
+                                    <h6>Shop by Style</h6>
+                                    <a href="necklace.html"><li>Casual</li></a>
+                                    <a href="necklace.html"><li>Party</li></a>
+                                    <a href="necklace.html"><li>Office</li></a>
+                                    <a href="necklace.html"><li>Traditional</li></a>
+    
+                                </ul>
+
+                                <a class="bracelet">
+                                    <li>
+                                        <span>Bracelets</span>
+                                        <i class="fa-solid fa-caret-right" style="color: #ffffff;"></i>
+                                    </li>
                                 </a>
+
+                                <ul class="sub-drop drop-down-bracelet">
+                                    <a href="necklace.html"><h6>All Bracelets</h6></a>
+                                    <h6>Shop by Colour</h6>
+                                    <a href="necklace.html"><li>Silver</li></a>
+                                    <a href="necklace.html"><li>Gold</li></a>
+                                    <a href="necklace.html"><li>Rose Gold</li></a>
+                                    <h6>Shop by Style</h6>
+                                    <a href="necklace.html"><li>Casual</li></a>
+                                    <a href="necklace.html"><li>Party</li></a>
+                                    <a href="necklace.html"><li>Office</li></a>
+                                    <a href="necklace.html"><li>Traditional</li></a>
+    
+                                </ul>
+
                             </ul>
+
+                            <ul class="sub-drop drop-down-necklace d-none d-lg-block">
+                                <a href="necklace.html"><h6>All Necklaces</h6></a>
+                                <h6>Shop by Colour</h6>
+                                <a href="necklace.html"><li>Silver</li></a>
+                                <a href="necklace.html"><li>Gold</li></a>
+                                <a href="necklace.html"><li>Rose Gold</li></a>
+                                <h6>Shop by Style</h6>
+                                <a href="necklace.html"><li>Casual</li></a>
+                                <a href="necklace.html"><li>Party</li></a>
+                                <a href="necklace.html"><li>Office</li></a>
+                                <a href="necklace.html"><li>Traditional</li></a>
+
+                            </ul>
+
+                            <ul class="sub-drop drop-down-earring d-none d-lg-block">
+                                <a href="necklace.html"><h6>All Earrings</h6></a>
+                                <h6>Shop by Colour</h6>
+                                <a href="necklace.html"><li>Silver</li></a>
+                                <a href="necklace.html"><li>Gold</li></a>
+                                <a href="necklace.html"><li>Rose Gold</li></a>
+                                <h6>Shop by Style</h6>
+                                <a href="necklace.html"><li>Casual</li></a>
+                                <a href="necklace.html"><li>Party</li></a>
+                                <a href="necklace.html"><li>Office</li></a>
+                                <a href="necklace.html"><li>Traditional</li></a>
+
+                            </ul>
+
+                            <ul class="sub-drop drop-down-ring d-none d-lg-block">
+                                <a href="necklace.html"><h6>All Rings</h6></a>
+                                <h6>Shop by Colour</h6>
+                                <a href="necklace.html"><li>Silver</li></a>
+                                <a href="necklace.html"><li>Gold</li></a>
+                                <a href="necklace.html"><li>Rose Gold</li></a>
+                                <h6>Shop by Style</h6>
+                                <a href="necklace.html"><li>Casual</li></a>
+                                <a href="necklace.html"><li>Party</li></a>
+                                <a href="necklace.html"><li>Office</li></a>
+                                <a href="necklace.html"><li>Traditional</li></a>
+
+                            </ul>
+
+                            <ul class="sub-drop drop-down-bracelet d-none d-lg-block">
+                                <a href="necklace.html"><h6>All Bracelets</h6></a>
+                                <h6>Shop by Colour</h6>
+                                <a href="necklace.html"><li>Silver</li></a>
+                                <a href="necklace.html"><li>Gold</li></a>
+                                <a href="necklace.html"><li>Rose Gold</li></a>
+                                <h6>Shop by Style</h6>
+                                <a href="necklace.html"><li>Casual</li></a>
+                                <a href="necklace.html"><li>Party</li></a>
+                                <a href="necklace.html"><li>Office</li></a>
+                                <a href="necklace.html"><li>Traditional</li></a>
+
+                            </ul>
+
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sale</a>
+                            <a class="nav-link" href="sale.html">Sale</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Wishlist</a>
+                            <a class="nav-link" href="wishlist.html">Wishlist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/cart-page.html">Cart</a>
+                            <a class="nav-link" href="cart-page.html">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="register.html">My Account</a>
                         </li>
                     </ul>
                 </div>
+                <form class="form-mob form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </form>
             </div>
-            <form class="form-mob form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-            </form>
         </nav>
     </section>
 
