@@ -1583,13 +1583,15 @@ footer span {
 #cust-review .card::-webkit-scrollbar-thumb {
     background-color: rgba(7, 7, 7, 0.105);
 }
-#cust-review h1{
+
+#cust-review h1 {
     position: relative;
     font-size: 2rem;
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
 }
-#cust-review .testimonial-heading h1::after{
+
+#cust-review .testimonial-heading h1::after {
     content: '';
     width: 12%;
     height: 0.125rem;
@@ -1601,10 +1603,217 @@ footer span {
     transform: translate(-50%, -50%);
     border-radius: 0.26rem;
 }
+#cust-review .testimonial-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#cust-review .testimonial-card .card-body .p-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: normal;
+    gap: 1rem;
+}
+#cust-review .testimonial-card .card-body .p-name h4{
+    line-height: normal;
+    margin: 0;
+}
+#cust-review .testimonial-card .card-body .insta-logo{
+    background: url('/img/logo/Instagram_Glyph_Gradient.png') no-repeat;
+    background-size: contain;
+    height: 1.4rem;
+    width: 1.4rem;
+}
+#cust-review .testimonial-card .card-body .x-logo{
+    background: url('/img/logo/logo-black.png') no-repeat;
+    background-size: contain;
+    height: 1.3rem;
+    width: 1.3rem;
+}
+#cust-review .testimonial-card .card-body .fb-logo{
+    background: url('/img/logo/Facebook_Logo_Primary.png') no-repeat;
+    background-size: contain;
+    height: 1.4rem;
+    width: 1.4rem;
+}
+
 #cust-review .card img {
     width: 5rem;
 }
 
+#cust-review .review-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+
+#cust-review .review-inner {
+    /* background-color: #979797; */
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+#cust-review .review-inner h4{
+    margin-bottom: 0rem;
+}
+
+#cust-review .review-inner .cust-rev{
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    transition: max-height .4s ease-in-out;
+}
+#cust-review .review-inner .cust-rev.rev{
+    max-height: 20rem;
+}
+
+#cust-review .rating-sec {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    height: 10rem;
+}
+#cust-review .rating-sec span{
+    font-size: 1.2rem;
+}
+#cust-review .rating-sec i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+#cust-review .rating-sec i:hover{
+    opacity: .8;
+}
+
+#cust-review .review-sec .review-buttons {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    display: flex;
+    flex-direction: row;
+    /* gap: 3rem; */
+    justify-content: space-between;
+    align-items: center;
+}
+#cust-review .review-inner .cust-rev .cust-comments{
+    line-height: normal;
+}
+#cust-review .review-inner .cust-rev .cust-comments textarea{
+    height: 4rem;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.098);
+    border: 0;
+    resize: none;
+    padding: .5rem;
+}
+#cust-review .review-inner .cust-rev .cust-comments textarea::-webkit-scrollbar {
+    width: .2rem;
+}
+
+#cust-review .review-inner .cust-rev .cust-comments textarea::-webkit-scrollbar-track {
+    background-color: #0000000f;
+}
+
+#cust-review .review-inner .cust-rev .cust-comments textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.162);
+}
+
+
+#cust-review .review-inner .cust-rev .cust-comments textarea:focus{
+    outline: none;
+}
+
+#cust-review .review-inner .cust-doubt{
+    max-height: 0;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+
+}
+#cust-review .review-inner .cust-doubt.doubt{
+    max-height: 9rem;
+}
+
+#cust-review .review-inner .cust-doubt .doubt-area{
+    width: 100%;
+}
+#cust-review .review-inner .cust-doubt textarea{
+    width: 100%;
+    border: 0;
+    resize: none;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.084);
+    padding: .5rem;
+}
+#cust-review .review-inner .cust-doubt textarea:focus{
+    outline: none;
+}
+#cust-review .review-sec button {
+    width: 15rem;
+    padding: .2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 2px solid #854a38;
+    background-color: white;
+    
+}
+#cust-review .review-inner .cust-doubt button{
+    background-color: #132043;
+    color: white;
+    border-color: #0e1730;
+    margin-bottom: .5rem;
+}
+#cust-review .review-inner .cust-doubt button:hover{
+    background-color: #0e1730;
+}
+#cust-review .cust-rev button{
+    
+    background-color: #132043;
+    color: white;
+    border-color: #0e1730;
+}
+#cust-review .cust-rev button:hover{
+    background-color: #0e1730;
+}
+
+#cust-review .review-sec .doubt-btn {
+    background-color: #a45d47;
+    color: white;
+
+}
+
+#cust-review .review-sec .doubt-btn:hover {
+    background-color: #854a38;
+}
+
+#cust-review .review-sec .rev-btn {
+    border: 2.5px solid #a45d47;
+    color: #a45d47;
+}
+
+#cust-review .review-sec .rev-btn:hover {
+    opacity: .8;
+}
 
 
 /* Similar Products CSS */

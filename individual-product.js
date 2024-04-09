@@ -81,23 +81,23 @@ for (var i = 0; i < otherImg.length; i++) {
     // console.log(mainImg.innerText);
     // console.log(selectedImg);
     mainImg.setAttribute("src", selectedImg);
-    
+
   })
 }
 
 //quantity button
-var quantityInput=document.querySelector(".quantity-input");
-var incr=document.querySelector(".quant-up");
-var decr=document.querySelector(".quant-down");
-var productQuant=0;
-incr.addEventListener("click", function(){
+var quantityInput = document.querySelector(".quantity-input");
+var incr = document.querySelector(".quant-up");
+var decr = document.querySelector(".quant-down");
+var productQuant = 0;
+incr.addEventListener("click", function () {
   // console.log("incr");
   productQuant++;
   quantityInput.setAttribute("value", productQuant);
 })
-decr.addEventListener("click", function(){
+decr.addEventListener("click", function () {
   // console.log("decr");
-  if(productQuant>0){
+  if (productQuant > 0) {
     productQuant--;
     quantityInput.setAttribute("value", productQuant);
   }
@@ -105,13 +105,39 @@ decr.addEventListener("click", function(){
 
 //single-product-details ->  wishlist-button
 
-var wishlistBigBtn=document.querySelector(".single-product-details .wishlist-button");
-wishlistBigBtn.addEventListener("click", function(){
+var wishlistBigBtn = document.querySelector(".single-product-details .wishlist-button");
+wishlistBigBtn.addEventListener("click", function () {
   // console.log(wishlistBigBtn.textContent);
-  wishlistBigBtn.textContent="ADDED TO WISHLIST";
-  wishlistBigBtn.style.opacity=".8";
+  wishlistBigBtn.textContent = "ADDED TO WISHLIST";
+  wishlistBigBtn.style.opacity = ".8";
 })
 
 // mainImg.addEventListener("click", ()=>{
 //   // console.log("clickd");
 // })
+
+
+
+//review secton-> button expansion
+
+var revBtn = document.querySelector(".rev-btn");
+var custRev=document.querySelector(".review-inner .cust-rev");
+var doubtBtn= document.querySelector(".doubt-btn");
+var custDoubt=document.querySelector(".cust-doubt");
+
+// console.log(custRev.classList);
+revBtn.addEventListener("click", function () {
+  // console.log("clicked");
+  if(custDoubt.classList.contains("doubt")){
+    custDoubt.classList.remove("doubt");
+  }
+  custRev.classList.toggle("rev");
+})
+
+// console.log(custDoubt.classList);
+doubtBtn.addEventListener("click", function(){
+  if(custRev.classList.contains("rev")){
+    custRev.classList.remove("rev");
+  }
+  custDoubt.classList.toggle("doubt")
+})
