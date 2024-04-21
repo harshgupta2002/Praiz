@@ -52,6 +52,48 @@ for (let i = 0; i < editBtn.length; i++) {
 }
 
 
+// New Address Book
+
+var lgAddressCards=document.querySelectorAll(".lg-address-card");
+var addressBookLg=document.querySelector(".address-book-lg");
+var backBtn=document.querySelectorAll(".address-form .back-btn");
+// console.log(addressBook);
+for(var i=0; i<lgAddressCards.length; i++){
+    lgAddressCards[0].addEventListener("click", function(){
+        setTimeout(() => {
+            addressBookLg.classList.add("active");
+        }, 100);
+    })
+}
+for(var i=0; i<backBtn.length; i++){
+    backBtn[i].addEventListener("click", function(){
+        addressBookLg.classList.remove("active");
+    })
+}
+
+// New Address Book for Mob Screen
+
+var xsAddressCards=document.querySelectorAll(".xs-address-card");
+var addressBookXs=document.querySelector(".address-book-xs");
+var backBtnXs=document.querySelectorAll(".address-form-xs .back-btn");
+
+for(var i=0; i<xsAddressCards.length; i++){
+    xsAddressCards[0].addEventListener("click", function(){
+        setTimeout(() => {
+            addressBookXs.classList.add("active");
+        }, 100);
+    })
+}
+for(var i=0; i<backBtnXs.length; i++){
+    backBtnXs[i].addEventListener("click", function(){
+        addressBookXs.classList.remove("active");
+    })
+}
+
+
+
+
+
 //Mobile MyAccount Menu
 
 var mobMenu=document.querySelector(".mob-account-opt");
@@ -76,3 +118,6 @@ mobOpt4.addEventListener("click", () => {
     mobMenu.classList = ["mob-account-opt d-block d-sm-none"];
     mobMenu.classList.add("my-account");
 })
+
+
+

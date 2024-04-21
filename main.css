@@ -797,6 +797,7 @@ p {
 }
 
 #products .featured-product .product-card .product-img .discount-tag {
+    opacity: 0;
     position: relative;
     background-color: #a45d47;
     padding: 6px;
@@ -2437,22 +2438,26 @@ input[type="range"]::-moz-range-thumb {
 
 
 #product-list .product-listing .product-card {
+    background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex: 0 0 auto;
     width: 100%;
-    height: 395px;
+    height: 425px;
     overflow: hidden;
-    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 8%);
-    border: solid 1px rgba(19, 18, 18, 0.053);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0.125rem 0.675rem;
+    border: 1px solid rgba(19, 18, 18, 0.055);
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5rem;
+    margin-top: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex-grow: 1;
 }
 
 #product-list .product-listing .product-card a {
-    flex-grow: 1;
+    text-decoration: none;
+    color: black;
 }
 
 #product-list .product-listing .product-card .product-img {
@@ -2460,10 +2465,7 @@ input[type="range"]::-moz-range-thumb {
     width: 100%;
     height: 250px;
     overflow: hidden;
-    padding-left: 15px;
-    padding-right: 15px;
     margin-top: -5px;
-
 }
 
 #product-list .product-listing .product-card .product-img .product-thumb {
@@ -2480,10 +2482,12 @@ input[type="range"]::-moz-range-thumb {
 #product-list .product-listing .product-card .product-img .product-thumb-s {
     opacity: 0;
     position: absolute;
-    left: 1rem;
+    /* left: 1rem; */
     right: 0;
     bottom: 0;
     top: 1.8rem;
+    display: flex;
+
 }
 
 #product-list .product-listing .product-card .product-img .product-thumb-s:hover {
@@ -2491,7 +2495,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #product-list .product-listing .product-card .product-img .product-thumb-s {
-    width: 88%;
+    width: 102%;
     height: 85%;
     object-fit: cover;
     border: solid 1px rgb(237, 237, 237);
@@ -2509,14 +2513,16 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #product-list .product-listing .product-card .product-info {
-    width: 100%;
-    margin-top: 0px;
+    overflow: hidden;
+    height: 9.2rem;
+    margin-top: .6rem;
     padding: 0px;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding-bottom: 1.5rem;
+    /* flex-grow: 1; */
 }
 
 #product-list .product-listing .product-card .product-info a {
@@ -2538,7 +2544,8 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #product-list .product-listing .product-card .product-info .product-name {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    line-height: normal;
 }
 
 #product-list .product-listing .product-card .product-info .product-price {
@@ -2550,17 +2557,16 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #product-list .product-listing .product-card .card-btn {
-    width: 60%;
+    width: 75%;
+    margin-top: 0.3rem;
     border-radius: 0%;
 }
 
 #product-list .product-listing .product-card .card-big-btn {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #product-list .product-listing .product-card .product-info .btn-outline-primary {
@@ -2575,7 +2581,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #product-list .product-listing .product-card .product-info .btn-outline-primary:focus {
-    box-shadow: 0 0 0 .25rem rgba(4, 45, 107, 0.5)
+    box-shadow: none
 }
 
 #product-list .product-listing .product-card .product-info .wishlist-button-small {
@@ -2821,6 +2827,17 @@ input[type="range"]::-moz-range-thumb {
 .mob-account-opt .order-history {
     display: none;
 }
+
+.mob-account-opt .order-history::-webkit-scrollbar {
+    width: .2rem;
+}
+.mob-account-opt .order-history::-webkit-scrollbar-track {
+    background-color: #0000001f;
+}
+.mob-account-opt .order-history::-webkit-scrollbar-thumb {
+    background-color: rgba(7, 7, 7, 0.105);
+}
+
 
 .mob-account-opt.order-history .order-history {
     display: block;
@@ -3356,7 +3373,21 @@ input[type="range"]::-moz-range-thumb {
     width: 77%;
     display: none;
     overflow: scroll;
+    overflow-x: hidden;
 }
+
+#myAccount .menu-container .address-book::-webkit-scrollbar {
+    width: .2rem;
+}
+
+#myAccount .menu-container .address-book::-webkit-scrollbar-track {
+    background-color: #0000001f;
+}
+
+#myAccount .menu-container .address-book::-webkit-scrollbar-thumb {
+    background-color: rgba(7, 7, 7, 0.105);
+}
+
 
 #myAccount .menu-container .account-side-menu.option3~.address-book {
     display: block;
@@ -3419,13 +3450,83 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #myAccount .menu-container .address-book .address-form {
-    width: 60%;
+    width: 65%;
     display: none;
 }
+
+/* for new  address form opening clicking on the new address card */
+
+#myAccount .menu-container .address-book-lg.active .address-form{
+    display: block;
+}
+#myAccount .menu-container .address-book-lg.active .address-heading{
+    display: none;
+}
+#myAccount .menu-container .address-book-lg.active .lg-address-card-tiles{
+    display: none;
+}
+
+#myAccount .menu-container .address-book .address-form .new-address-heading{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+/* for new  address form opening clicking on the new address card (FOR MOB SCREEN) */
+
+.mob-account-opt .address-book-xs .address-form-xs{
+    display: none;
+}
+
+.mob-account-opt .address-book-xs.active .address-form-xs{
+    display: block;
+    
+}
+
+.mob-account-opt .address-book-xs.active .xs-address-card-tiles{
+    display: none;
+}
+.mob-account-opt .address-book-xs.active .address-form-xs .new-address-heading-xs{
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+.mob-account-opt .address-book-xs.active .address-form-xs .xs-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.2rem;
+    gap: .3rem;
+}
+.mob-account-opt .address-book-xs.active .address-form-xs .submit-btn{
+    background-color: #132043;
+    border-radius: 0;
+    border-color: #132043;
+    width: 49%;
+    
+}
+.mob-account-opt .address-book-xs.active .address-form-xs .back-btn{
+    background-color: #a45d47;
+    border-radius: 0;
+    border-color: #854a38;
+    width: 49%;
+    
+}
+.mob-account-opt .address-book-xs.active .address-form-xs .back-btn:focus{
+    box-shadow: 0 0 0 .25rem #a45d478d;
+}
+
+/* #myAccount .menu-container .address-book .address-form .new-address-heading{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+} */
 
 #myAccount .menu-container .address-book .address-card.new-card~.address-form {
     display: block;
 }
+
+
+
 
 #myAccount .menu-container .address-book .address-form input {
     border-radius: 0;
@@ -3437,13 +3538,26 @@ input[type="range"]::-moz-range-thumb {
     border-color: #132043;
     width: 8rem;
 }
+#myAccount .menu-container .address-book .address-form .back-btn{
+    background-color: #a45d47;
+    border-radius: 0;
+    border-color: #854a38;
+    width: 8rem;
+}
 
 #myAccount .menu-container .address-book .address-form .submit-btn:hover {
     background-color: #0e1730;
 }
 
+#myAccount .menu-container .address-book .address-form .back-btn:hover {
+    background-color: #854a38;
+}
+
 #myAccount .menu-container .address-book .address-form .submit-btn:focus {
     box-shadow: 0 0 0 .25rem rgba(4, 45, 107, 0.5)
+}
+#myAccount .menu-container .address-book .address-form .back-btn:focus{
+    box-shadow: 0 0 0 .25rem #a45d478d;
 }
 
 #myAccount .menu-container .address-book .address-form .alert-text-danger {
@@ -3534,6 +3648,19 @@ input[type="range"]::-moz-range-thumb {
 
 #myAccount .menu-container .my-account .my-account-inner .info .submit-btn {
     display: none;
+}
+
+#myAccount .menu-container .account-side-menu.option1 .option.option-1{
+    background-color: rgba(0, 0, 0, 0.062);
+}
+#myAccount .menu-container .account-side-menu.option2 .option.option-2{
+    background-color: rgba(0, 0, 0, 0.062);
+}
+#myAccount .menu-container .account-side-menu.option3 .option.option-3{
+    background-color: rgba(0, 0, 0, 0.062);
+}
+#myAccount .menu-container .account-side-menu.option4 .option.option-4{
+    background-color: rgba(0, 0, 0, 0.062);
 }
 
 /* Cart Page Css  */

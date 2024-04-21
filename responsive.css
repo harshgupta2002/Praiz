@@ -185,7 +185,7 @@
         margin-left: 2rem;
     }
 
-    #cust-review .card{
+    #cust-review .card {
         height: 24vh;
     }
 
@@ -241,7 +241,7 @@
     /* } */
 
     #product-list .product-listing .product-card .product-img .discount-tag {
-        right: -190px;
+        right: -185px;
     }
 
     /* Register Page  */
@@ -274,6 +274,10 @@
 
     #myAccount .menu-container .praiz-coins .coin-inner .right-side .card-img {
         height: 15vh;
+    }
+
+    #myAccount .menu-container .address-book .address-form {
+        width: 83%;
     }
 
     /* cart page css  */
@@ -708,35 +712,55 @@
         width: 80px;
     }
 
-    #cust-review .card .card-body h4{
+    #cust-review .card .card-body h4 {
         font-size: 1rem;
     }
 
-    #cust-review .card .card-body p{
+    #cust-review .card .card-body p {
         font-size: .7rem;
         line-height: 1rem;
     }
 
-    #cust-review .review-inner .cust-doubt button{
+    #cust-review .review-inner .cust-doubt button {
         width: 11.3rem;
     }
-    #cust-review .cust-rev button{
+
+    #cust-review .cust-rev button {
         width: 11.3rem;
     }
-    
+
     /* Rings Product Page Css  */
 
     .top-banner {
         margin-top: 6.5rem;
     }
 
-    #product-list .product-listing .product-card {
-        width: 85%;
+    #product-list .product-listing .product-card .product-img .discount-tag {
+        right: -225px;
     }
 
-    #product-list .product-listing .product-card .product-img .discount-tag {
-        right: -190px;
+    #product-list .product-listing .product-card {
+        height: 505px;
     }
+
+    #product-list .product-listing .product-card .product-img {
+        position: relative;
+        height: 330px;
+        overflow: hidden;
+    }
+
+    #product-list .product-listing .product-card .product-img .product-thumb {
+        width: 100%;
+        height: 85%;
+        object-fit: cover;
+        border: solid 1px rgb(237, 237, 237);
+        object-position: center;
+    }
+
+    #product-list .product-listing .product-card .product-info .product-name{
+        font-size: 1.2rem;
+    }
+
 
 
     /* #product-list .filter-row .filter-style { */
@@ -1433,7 +1457,7 @@
     /* Product List Page  */
 
     .top-banner {
-        margin-top: 7.5rem;
+        margin-top: 9.5rem;
     }
 
     .top-banner .ring-banner {
@@ -1453,21 +1477,38 @@
     #product-list .product-listing .product-card {
         width: 100%;
         margin-top: 2rem;
-        height: 405px;
+        height: 525px;
     }
 
     #product-list .product-listing .product-card .product-img {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 0px;
+        padding-right: 0px;
 
     }
 
     #product-list .product-listing .product-card .product-img .product-thumb-s {
         height: 70%;
-        width: 89%;
-        left: 8px;
+        width: 99%;
+        left: 1px;
         top: 28px;
     }
+
+
+    #product-list .product-listing .product-card .product-img .discount-tag{
+        right: calc(-70% + 10px);
+        top: 35px;
+        border-radius: 2px;
+        font-size: .5rem;
+        font-weight: bold;
+    }
+
+    #product-list .product-listing .product-card .product-info{
+        margin-top: -45px;
+    }
+    #product-list .product-listing .product-card .product-info{
+        height: 14rem;
+    }
+
 
     /* #product-list .product-listing .product-card .product-info {
         margin-top: -30px;
@@ -1506,12 +1547,7 @@
     } */
 
     #product-list .product-listing .product-card .card-big-btn {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        gap: .5rem;
+        display: block;
     }
 
     #product-list .product-listing .product-card .product-info .btn-outline-primary {
@@ -1520,9 +1556,9 @@
 
 
     #product-list .product-listing .product-card .product-info .wishlist-button-small-mob.btn-outline-primary {
-        width: 100%;
         color: #132043;
         border-color: #132043;
+        font-size: .8rem;
     }
 
     #product-list .product-listing .product-card .product-info .wishlist-button-small-mob.btn-outline-primary:hover {
@@ -1532,7 +1568,11 @@
     }
 
     #product-list .product-listing .product-card .product-info .wishlist-button-small-mob.btn-outline-primary:focus {
-        box-shadow: 0 0 0 .25rem rgba(164, 93, 71, 0.363)
+        box-shadow: none
+    }
+
+    #product-list .product-listing .product-card .product-info .btn-outline-primary:focus{
+        box-shadow: none;
     }
 
     #product-list .product-listing .product-card .card-btn {
@@ -1546,6 +1586,21 @@
     #product-list .product-listing .product-card .product-info .wishlist-button-small-mob {
         display: block;
         border-radius: 0;
+    }
+
+    #product-list .product-listing .product-card .product-info .wishlist-button-small-mob{
+        display: block;
+        background-color: #F4F5F5;
+        border: 1px solid #a45d47;
+        color: #a45d47;
+        padding: .4rem;
+        font-size: 1rem;
+        float: none;
+        margin-left: auto;
+        margin-right: .78rem;
+        width: 100%;
+        border-radius: 0px;
+        margin-top: .5rem;
     }
 
 
@@ -2269,12 +2324,14 @@
 
     #blogs-list .blog-heading {
         margin-top: 2.5rem;
-        
+
     }
-    #blogs-list .blog-heading h1{
+
+    #blogs-list .blog-heading h1 {
         font-size: 1.5rem;
-        
+
     }
+
     #blogs-list .blog-heading::after {
         width: 20%;
     }
@@ -2282,33 +2339,40 @@
     #blogs-list .blog-tiles {
         margin-top: 3rem;
     }
-    #cust-review .review-sec .review-buttons{
+
+    #cust-review .review-sec .review-buttons {
         /* padding-left: 0; */
         /* padding-right: 0; */
     }
 
     /* single product css for testimonial section  */
 
-    #cust-review h1{
+    #cust-review h1 {
         margin-top: 2.5rem;
         margin-bottom: 2.5rem;
     }
-    #cust-review .review-inner{
+
+    #cust-review .review-inner {
         width: 100%;
     }
-    #cust-review .review-inner .cust-rev{
+
+    #cust-review .review-inner .cust-rev {
         /* padding: 0; */
     }
-    #cust-review .review-sec button{
+
+    #cust-review .review-sec button {
         width: 9.6rem;
     }
-    #cust-review .review-inner .cust-doubt button{
+
+    #cust-review .review-inner .cust-doubt button {
         width: 10.2rem;
     }
-    #cust-review .review-inner h4{
+
+    #cust-review .review-inner h4 {
         margin-bottom: 1rem;
     }
-    #cust-review .review-sec button{
+
+    #cust-review .review-sec button {
         padding-left: .5rem;
         padding-right: .5rem;
     }
