@@ -125,10 +125,12 @@ for (i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
+    if (dropdownContent.style.maxHeight === "15rem") {
+      dropdownContent.style.maxHeight = "0";
+      dropdown[i].style.backgroundColor="white";
     } else {
-      dropdownContent.style.display = "block";
+      dropdownContent.style.maxHeight = "15rem";
+      dropdown[i].style.backgroundColor="grey";
     }
   });
 }
@@ -155,5 +157,20 @@ sortFilter.addEventListener("click", () => {
 var midMenuCloseBtn = document.querySelector(".close-mid-menu");
 midMenuCloseBtn.addEventListener("click", ()=>{
   option.classList.remove("s-clicked");
+}) 
+
+//Filter button arrows
+
+const sideDropdown=document.querySelectorAll(".dropdown-btn");
+const sideArrow= document.querySelectorAll(".dropdown-btn .fa-caret-right");
+sideDropdown[0].addEventListener("click", function(){
+  sideArrow[0].classList.toggle("selected");
 })
+sideDropdown[1].addEventListener("click", function(){
+  sideArrow[1].classList.toggle("selected");
+})
+sideDropdown[2].addEventListener("click", function(){
+  sideArrow[2].classList.toggle("selected");
+})
+
 

@@ -220,7 +220,7 @@ p {
 }
 
 #header .fixed-top.expanded .container {
-    background: url("img/Banner/Header/11.png") center no-repeat;
+    background: url("img/Banner/Header/11.jpg") center no-repeat;
     background-size: cover;
     margin: 0;
     max-width: 100%;
@@ -581,18 +581,18 @@ p {
 }
 
 .home .home-banner-1 {
-    background-image: url("img/Banner/slide-banner/10.png");
+    background-image: url("img/Banner/slide-banner/10.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .home .home-banner-2 {
-    background-image: url("img/Banner/slide-banner/12.png");
+    background-image: url("img/Banner/slide-banner/12.jpg");
 }
 
 .home .home-banner-3 {
-    background-image: url("img/Banner/slide-banner/9.png");
+    background-image: url("img/Banner/slide-banner/9.jpg");
     background-size: cover;
 }
 
@@ -600,7 +600,7 @@ p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(70%, 120%);
+    transform: translate(-235%, 120%);
     font-weight: bold;
     color: white;
 }
@@ -3791,6 +3791,11 @@ input[type="range"]::-moz-range-thumb {
     border: none;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+#cart-page .cart-page-inner .cart-page-left table .cart-item-tr{
+    position: relative;
+    /* opacity: .2; */
+    
 }
 
 #cart-page .cart-page-inner .cart-page-left table .card img {
