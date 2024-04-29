@@ -1087,6 +1087,7 @@
         justify-content: center;
         align-items: flex-end;
     }
+    
 
     .home .home-banner-3 {
         background-image: url("img/Banner/slide-banner/9-mob.jpg");
@@ -1325,7 +1326,7 @@
 
     .products .up-to-off .off-banner {
         height: 5rem;
-        background: url("img/Banner/Lower Banner/banner-mob.png") no-repeat;
+        background: url("img/Banner/Lower Banner/banner-mob.jpg") no-repeat;
         background-position: center;
         background-size: cover;
     }
