@@ -1,0 +1,74 @@
+<%- include('header') -%>
+
+    <!-- Mobile View Buttons -->
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="loc"><a href="/">Home</a></div>
+    </div>
+
+    <section id="product-list">
+
+        <div class="product-listing">
+            <div class="container">
+                <div class="row">
+
+                    <% if(Products) { %>
+                        <% Products.forEach(product => { %>
+                    
+                    <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+
+                        <div class="product-card">
+                            <a href="/product/sproduct/<%= product._id %>">
+                                <div class="product-img">
+                                    <span class="discount-tag" style="opacity: 0;"><%= product.discount %>% off</span>
+                                    <img src="<%= product.thumbnail %>" class="product-thumb" alt="similar-product">
+                                    <img src="<%= product.images[0].url %>" alt="similar-product-s"
+                                        class="img-fluid product-thumb-s">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-dets">
+                                    <a href="#">
+                                        <div class="product-name"><%= product.title %></div>
+                                    </a>
+                                    <div class="product-price">&#8377 <%= product.sellingPrice %></span>
+                                        <span class="product-price"><del>&#8377 <%= product.price %></del></span>
+                                    </div>
+
+                                    <div class="py-1">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <div class="card-big-btn">
+                                    <button type="button" class="btn btn-outline-primary card-btn add-to-cart" onclick="add_to_cart('<%= product._id %>', '<%= product.quantity %>', '<%= product.color %>', '<%= user?.refreshToken %>')">Add to
+                                        Cart</button>
+                                    <button type="button" class="wishlist-button-small">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="wishlist-button-small-mob btn btn-outline-primary" onclick="add_to_wishlist('<%= product._id %>', `<%= user?user._id:'' %>`)">Add
+                                        to
+                                        Wishlist</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <% }) %>
+                <% } %>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <%- include('footer') -%>

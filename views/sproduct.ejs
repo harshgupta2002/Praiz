@@ -1,0 +1,419 @@
+<%- include('header') -%>
+
+    <!-- Mobile View Buttons -->
+    <div class="mobileShow">
+        <% if(user){ %>
+            <button class="buynow-mob buy_now"
+                onclick="buy_now('<%= product._id %>', '<%= product.title %>', '<%= product.images[0].url %>', '<%= product.quantity %>', '<%= product.price %>', '<%= product.sellingPrice %>', '<%= product.discount %>', '<%= product.color %>', '<%= user.refreshToken %>')">Buy
+                Now</button>
+            <button type="button" class="cart-mob add-to-cart"
+                onclick="add_to_cart('<%= product._id %>', '<%= product.title %>', '<%= product.images[0].url %>', '<%= product.quantity %>', '<%= product.price %>', '<%= product.sellingPrice %>', '<%= product.discount %>', '<%= product.color %>', '<%= user.refreshToken %>')">Add
+                to cart
+            </button>
+            <% } else { %>
+                <button class="buynow-mob buy_now"
+                    onclick="buy_now('<%= product._id %>', '<%= product.title %>', '<%= product.images[0].url %>', '<%= product.quantity %>', '<%= product.price %>', '<%= product.sellingPrice %>', '<%= product.discount %>', '<%= product.color %>', '-1')">Buy
+                    Now</button>
+                <button class="cart-mob add-to-cart"
+                    onclick="add_to_cart('<%= product._id %>', '<%= product.title %>', '<%= product.images[0].url %>', '<%= product.quantity %>', '<%= product.price %>', '<%= product.sellingPrice %>', '<%= product.discount %>', '<%= product.color %>', '-1')">
+                    Add to cart
+                </button>
+                <% } %>
+    </div>
+
+    <!-- Single Product  -->
+
+    <section id="product-details" class="section-p1">
+        <div class="container"> <!-- enter "soldout in class to enable soldout filter on the product" -->
+            <div class="single-product-img">
+                <div>
+                    <img id="main-img" src="<%= product.images[0].url %>" width="100%" id="main-img" alt="main-img">
+                </div>
+                <div class="mob-wishlist">
+                    <% if(user){ %>
+                        <button class="wishlist-button-small"
+                            onclick="add_to_wishlist('<%= product._id %>', '<%= user._id %>')">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <% }else { %>
+                            <button class="wishlist-button-small" onclick="add_to_wishlist('<%= product._id %>', '')">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <% } %>
+                </div>
+
+                <div class="small-img-grp">
+                    <% product.images.forEach(image=>{ %>
+                        <div class="small-img-col">
+                            <img class="p-img" src="<%= image.url %>" width="100%" class="small-img" alt="small-img">
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+
+            <div class="single-product-details">
+                <h6>Home / <%= product.category %>
+                </h6>
+                <h4>
+                    <%= product.title %>
+                </h4>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="striked-price"><del>&#8377;<%= product.price %></del></h5>
+                <h2>&#8377;<%= product.sellingPrice %>
+                        <span>(Inclusive of all taxes)</span>
+                </h2>
+
+                <div class="coupon-offers">
+                    <div>
+                        <span>Buy <b>one</b> product & get Flat 10% off! Use Code: PRAIZ10</span>
+                    </div>
+                    <div>
+                        <span>Buy <b>two</b> products & get Flat 15% off! Use Code: PRAIZ15</span>
+                    </div>
+                    <div>
+                        <span>Buy <b>three</b> products & get Flat 25% off! Use Code: PRAIZ25</span>
+                    </div>
+                </div>
+
+                <div class="select-input">
+                    <select>
+                        <option>Select Size</option>
+                        <option>adjustable</option>
+                        <option disabled>3 rem</option>
+                        <option disabled>3.5 rem</option>
+                    </select>
+                    <!-- <div id="incdec">
+                        <input id="set_count"  class="quantity-input" type="Number" value="1" min="1" max="<%= product.quantity %>" />
+                        <i class="fa-solid fa-caret-up quant-up" style="color: #132043;"></i>
+                        <i class="fa-solid fa-caret-down quant-down" style="color: #132043;"></i>
+                    </div> -->
+
+                    <div class="quantity">
+                        <a href="" class="quantity__minus change_quantity"><span style="color: #ffffff;">-</span></a>
+                        <input id="quantity" name="quantity" type="text" class="quantity__input">
+                        <a href="" class="quantity__plus change_quantity"><span style="color: #ffffff;">+</span></a>
+                        <div class="spinner"></div>
+                    </div>
+
+                    <!-- Tryinggg !!  -->
+                    <% if(user){ %>
+                        <button type="button" class="cart-button add-to-cart"
+                            onclick="add_to_cart('<%= product._id %>', '<%= product.title %>', '<%= product.images[0].url %>', '<%= product.quantity %>', '<%= product.price %>', '<%= product.sellingPrice %>', '<%= product.discount %>', '<%= product.color %>', '<%= user.refreshToken %>')">Add
+                            to cart
+                        </button>
+                        <% }else{ %>
+                            <button class="cart-button add-to-cart"
+                                onclick="add_to_cart('<%= product._id %>', '<%= product.title %>', '<%= product.images[0].url %>', '<%= product.quantity %>', '<%= product.price %>', '<%= product.sellingPrice %>', '<%= product.discount %>', '<%= product.color %>', '-1')">
+                                Add to cart
+                            </button>
+                            <% } %>
+                </div>
+
+                <!-- <button class="cart-add">ADD TO CART <i class="fa-solid fa-cart-shopping"></i></button> -->
+
+
+                <!-- <button class="wishlist-add">ADD TO WISHLIST<i class="fa-solid fa-cart-shopping"></i></button> -->
+                <% if(user){ %>
+                    <button class="buynow-button buy_now"
+                        onclick="buy_now('<%= product._id %>', '<%= product.title %>', '<%= product.images[0].url %>', '<%= product.quantity %>', '<%= product.price %>', '<%= product.sellingPrice %>', '<%= product.discount %>', '<%= product.color %>', '<%= user?.refreshToken %>')"><span class="button-text">BUY
+                            NOW</span><span class="buy-now-cart-symbol"><i class="fas fa-shopping-cart"
+                                style="color: #ffffff;"></i></span></button>
+                    <button class="wishlist-button"
+                        onclick="add_to_wishlist('<%= product._id %>', '<%= user._id %>')"><span>ADD TO
+                            WISHLIST</span></button>
+                    <% }else{ %>
+                        <button class="buynow-button buy_now"
+                            onclick="buy_now('<%= product._id %>', '<%= product.title %>', '<%= product.images[0].url %>', '<%= product.quantity %>', '<%= product.price %>', '<%= product.sellingPrice %>', '<%= product.discount %>', '<%= product.color %>', ' ')"><span class="button-text">BUY
+                                NOW</span><span class="buy-now-cart-symbol"><i class="fas fa-shopping-cart"
+                                    style="color: #ffffff;"></i></span></button>
+                        <button class="wishlist-button" onclick="add_to_wishlist('<%= product._id %>', '')"><span>ADD TO
+                                WISHLIST</span></button>
+                        <% } %>
+                            <!-- <div class="availability-check">
+                    <div class="availability-text">Check availability:</div>
+                    <div class="pincode-input">
+                        <form class="form-inline">
+                            <div class="form-group mb-2">
+                                <input type="text" placeholder="Enter your pincode" class="form-control-plaintext"
+                                    id="pincode">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2" disabled>Check</button>
+                            <div class="not-available"> SORRY!!!, our product is not available in your region yet. We trying hard to reach you asap.
+                        </form>
+                    </div>
+                    <div class="availability-text">*We deliver all over India</div>
+                </div> -->
+
+                            <div class="feature-icon"></div>
+
+            </div>
+        </div>
+
+        <div class="product-descrp">
+            <div class="container">
+                <div class="description">
+                    <h4 class="fw-bold">Product Description</h4>
+                    <p class="description-para">
+                        <%= product.description %>
+                    </p>
+                    <div class="descrp-tiles">
+                        <ul class="list1">
+                            <li>
+                                <strong>Color</strong>
+                                <span>
+                                    <%= product.color[0] %>
+                                </span>
+                            </li>
+                            <li>
+                                <strong>Dimension</strong>
+                                <span>
+                                    <%= product.dimension %>
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class="list2">
+                            <li>
+                                <strong>Material</strong>
+                                <span>
+                                    <%= product.material %>
+                                </span>
+                            </li>
+                            <li>
+                                <strong>Weight</strong>
+                                <span>
+                                    <%= product.weight %>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="more-details">
+                    <h4 class="fw-bold">More Details</h4>
+                    <h6 class="fw-bold"> Shipment & Replacement</h6>
+                    <ul>
+                        <li>Item received is physically damaged.</li>
+                        <li>Item received has missing parts or accessories</li>
+                        <!-- <li>Item received is physically damaged.</li>
+                        <li>Item received has missing parts or accessories</li>
+                        <li>Item received has missing parts or accessories</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- testimonial -->
+
+    <section id="cust-review">
+        <div class="container">
+            <!-- <div class="row d-flex justify-content-center"> -->
+            <!-- <div class="testimonial-heading col-xl-8 text-center">
+                    <h1>Testimonials</h1>
+                    <h6 class="d-sm-none opacity-55">(scroll to read)</h6>
+                </div> -->
+
+
+            <!-- </div> -->
+
+            <div class="row text-center d-flex align-items-stretch">
+                <div class="col-md-4 mb-3 mb-md-0 d-flex align-items-stretch">
+                    <!-- <div class="card testimonial-card">
+                        <div class="card-up" style="background-color: #9d789b;"></div>
+                        <div class="avatar mx-auto bg-white">
+                            <img src="https://mdbcdn.b-cdn.net//images/Photos/Avatars/img%20(1).webp"
+                                class="rounded-circle img-fluid" />
+                        </div>
+                        <div class="card-body">
+                            <div class="p-name">
+                                <h4>Maria Smantha</h4>
+                                <div class="insta-logo"></div>
+                            </div>
+                            <hr />
+                            <p class="dark-grey-text">
+                                <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet eos adipisci,
+                                consectetur adipisicing elit.
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0 d-flex align-items-stretch">
+                    <!-- <div class="card testimonial-card">
+                        <div class="card-up" style="background-color: #7a81a8;"></div>
+                        <div class="avatar mx-auto bg-white">
+                            <img src="https://mdbcdn.b-cdn.net//images/Photos/Avatars/img%20(2).webp"
+                                class="rounded-circle img-fluid" />
+                        </div>
+                        <div class="card-body">
+                            <div class="p-name">
+                                <h4>Maria Smantha</h4>
+                                <div class="x-logo"></div>
+                            </div>
+                            <hr />
+                            <p class="dark-grey-text">
+                                <i class="fas fa-quote-left pe-2"></i>Neque cupiditate assumenda in maiores
+                                repudi mollitia architecto.
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-md-4 mb-0 d-flex align-items-stretch">
+                    <!-- <div class="card testimonial-card">
+                        <div class="card-up" style="background-color: #6d5b98;"></div>
+                        <div class="avatar mx-auto bg-white">
+                            <img src="https://mdbcdn.b-cdn.net//images/Photos/Avatars/img%20(9).webp"
+                                class="rounded-circle img-fluid" />
+                        </div>
+                        <div class="card-body">
+                            <div class="p-name">
+                                <h4>Maria Smantha</h4>
+                                <div class="fb-logo"></div>
+                            </div>
+                            <hr />
+                            <p class="dark-grey-text">
+                                <i class="fas fa-quote-left pe-2"></i>Delectus impedit saepe officiis ab
+                                aliquam repellat rem unde ducimus.
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- <div class="review-sec">
+                <div class="review-inner">
+                    <h4 class="text-center">We would love to hear from you!</h4>
+                    <div class="cust-rev">
+                        <div class="rating-sec" id="set_ratings">
+                            <span>Rate this Product!</span>
+                            <div class="stars">
+                                <i class="fa-regular fa-star" style="color: #a45d47;"></i>
+                                <i class="fa-regular fa-star" style="color: #a45d47;"></i>
+                                <i class="fa-regular fa-star" style="color: #a45d47;"></i>
+                                <i class="fa-regular fa-star" style="color: #a45d47;"></i>
+                                <i class="fa-regular fa-star" style="color: #a45d47;"></i>
+                            </div>
+                        </div>
+
+                        <div class="cust-comments">
+                            <textarea placeholder="Write your review"></textarea>
+                        </div>
+
+                        <button type="button" class="submit-btn">Submit</button>
+
+                    </div>
+
+                    <div class="cust-doubt">
+                        <div class="doubt-area">
+                            <textarea placeholder="Ask your doubt..."></textarea>
+                        </div>
+
+                        <button type="button" class="submit-btn">Submit</button>
+
+                    </div>
+
+                    <div class="review-buttons">
+                        <button class="doubt-btn">Ask your Doubt</button>
+                        <p style="opacity: .2; font-size: 1.5rem;" class="d-none    d-sm-block">|</p>
+                        <button class="rev-btn">Submit Your Review</button>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </section>
+
+    <!-- Similar Products  -->
+
+    <section id="more-products">
+        <div class="also-look">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 mt-5">
+                        <div class="more-products-heading">
+                            <h4 class="fw-bold">Similar Products</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="pre-btn"><i class="fa-solid fa-arrow-left" style="color: #202022;"></i></i></button>
+                <button class="nxt-btn"><i class="fa-solid fa-arrow-right" style="color: #202022;"></i></i></button>
+                <div class="product-container">
+
+                    <% allProducts.forEach(item=> { %>
+                        <div class="product-card">
+                            <a href="/product/sproduct/<%= item._id %>">
+                                <div class="product-img">
+                                    <% if(item.discount> 0){ %>
+                                        <span class="discount-tag">
+                                            <%= item.discount %>% off
+                                        </span>
+                                        <% } %>
+                                            <img src="<%= item.thumbnail %>" class="product-thumb"
+                                                alt="similar-product">
+                                            <img src="<%= item.images[0].url %>" alt="similar-product-s"
+                                                class="img-fluid product-thumb-s">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-dets">
+                                    <a href="/product/sproduct/<%= item._id %>">
+                                        <div class="product-name">
+                                            <%= item.title %>
+                                        </div>
+                                    </a>
+                                    <div class="product-price">&#8377 <%= item.sellingPrice %></span>
+                                            <span class="product-price"><del>&#8377 <%= item.price %></del></span>
+                                    </div>
+                                    <div class="py-1">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <div class="card-big-btn">
+
+                                    <!-- <button type="button" class="btn btn-outline-primary card-btn" onclick="add_to_cart('<%= item._id %>', '<%= item.title %>', '<%= item.images[0].url %>', '<%= item.quantity %>', '<%= item.price %>', '<%= item.color %>', '<%= bearerToken %>')">Add to Cart</button> -->
+                                    <% if(user){ %>
+                                        <button type="button" class="btn btn-outline-primary card-btn add-to-cart"
+                                            onclick="add_to_cart('<%= item._id %>', '<%= item.title %>', '<%= item.images[0].url %>', '<%= item.quantity %>', '<%= item.price %>', '<%= item.sellingPrice %>', '<%= item.discount %>', '<%= item.color %>', '<%= user.refreshToken %>')">Add
+                                            to Cart</button>
+
+                                        <button type="button" class="wishlist-button-small"
+                                            onclick="add_to_wishlist('<%= item._id %>', '<%= user._id %>')">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="wishlist-button-small-mob btn btn-outline-primary"
+                                            onclick="add_to_wishlist('<%= item._id %>', '<%= user._id %>')">Add to
+                                            Wishlist</button>
+                                        <% } else { %>
+                                            <button type="button" class="btn btn-outline-primary card-btn add-to-cart"
+                                                onclick="add_to_cart('<%= item._id %>', '<%= item.title %>', '<%= item.images[0].url %>', '<%= item.quantity %>', '<%= item.price %>', '<%= item.color %>', '-1')">Add
+                                                to Cart</button>
+                                            <button type="button" class="wishlist-button-small"
+                                                onclick="add_to_wishlist('<%= item._id %>', '<%= user?._id %>')">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <% } %>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <%- include('footer') -%>
